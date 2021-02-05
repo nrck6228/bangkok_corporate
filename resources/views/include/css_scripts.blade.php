@@ -39,9 +39,9 @@
         event.preventDefault();
         
         var $this = $(this),
-            count = $this.attr('data-count'),
-            active = $this.hasClass('active'),
-            multiple = $this.hasClass('multiple-count');
+        count = $this.attr('data-count'),
+        active = $this.hasClass('active'),
+        multiple = $this.hasClass('multiple-count');
         
         // First method, allows to add custom function
         // Use when you want to do an ajax request
@@ -56,6 +56,5 @@
         // Second method, use when ... I dunno when but it looks cool and that's why it is here
         $.fn.noop = $.noop;
         $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
-        
     });
 </script>
