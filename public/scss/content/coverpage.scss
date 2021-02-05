@@ -1,0 +1,94 @@
+@import "../bootstrap/bootstrap";
+@import "../bootstrap/bootstrap-grid";
+@import "../bootstrap/bootstrap-reboot";
+@import "../variables";
+
+body{
+	padding:0;
+	margin:0;
+	font-family: 'Kanit', sans-serif;
+	// background-color: #fff450;
+	// background-image: url('../images/bg-main-full.jpg');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+    background-size: cover;
+    
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-secondary;
+        border-radius: 0;
+        // border: 3px solid $color-secondary;
+    }
+}
+
+.site-coverpage{
+    position:relative;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin:0 auto;
+    overflow: hidden;
+    
+    .img-coverpage{
+        display: block;
+		width: 100%;
+		max-width: 1280px;
+		padding: 25px;
+		margin: 0 auto;
+        text-align: center;
+        
+        img{
+            width: 100%;
+        }
+    }
+
+    .btn-coverpage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .enter-site{
+            padding: 0;
+            margin: 0 15px;
+            
+            a{
+                display: block;
+                min-width: 175px;
+                padding: 8px 15px 7px 15px; 
+                font-weight: $font-light;
+                font-size: 20px;
+                line-height: 25px;
+                text-align: center;
+                color: white;
+                background-image: linear-gradient(#006600, #10a44a);
+                transition: all 0.5s ease-in-out;
+                transition-property: background-image;
+
+                &:hover{
+                    background-image: linear-gradient(#006600, #006600);
+					color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.shadow {
+    box-shadow: 0px 4px 8px 0px rgba(74,74,74,0.3);
+    -webkit-transition: box-shadow .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    transition: box-shadow .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    transition: box-shadow .5s ease-in-out, transform .5s ease-in-out;
+    transition: box-shadow .5s ease-in-out, transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+.reflect{
+	-webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}

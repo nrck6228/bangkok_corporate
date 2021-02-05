@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="320px" height="190px" viewBox="0 0 320 190" style="enable-background:new 0 0 320 190;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#006600;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<line class="st0" x1="97.3" y1="92" x2="81" y2="92"/>
+		<line class="st0" x1="192.7" y1="92" x2="176.3" y2="92"/>
+		<line class="st0" x1="241.2" y1="92" x2="224.9" y2="92"/>
+		<path class="st0" d="M89.1,92V72.8c0-2.5,1.8-4.5,4.1-4.5h84.4c3.8,0,6.9,3.5,6.9,7.7v15.5"/>
+		<line class="st0" x1="145.9" y1="92" x2="129.5" y2="92"/>
+		<path class="st0" d="M137.7,92V72.8c0-2.5,1.8-4.5,4.1-4.5h84.4c3.8,0,6.9,3.5,6.9,7.7v15.5"/>
+		<path class="st0" d="M196.5,68.3H82.1c-1.9,0-3.4-1.5-3.4-3.4V53.1c0-6,4.9-10.9,10.9-10.9h98.8c4.5,0,8.6,2.8,10.2,7.1l3.9,10.5
+			C204,63.9,201,68.3,196.5,68.3z"/>
+		<line class="st0" x1="163.3" y1="42.2" x2="163.3" y2="68.3"/>
+		<path class="st0" d="M185,42.2v10.3c0,3.1,2.5,5.6,5.6,5.6h11.2"/>
+		<line class="st0" x1="98.1" y1="42.2" x2="98.1" y2="68.3"/>
+		<line class="st0" x1="119.8" y1="42.2" x2="119.8" y2="69.1"/>
+		<line class="st0" x1="141.6" y1="42.2" x2="141.6" y2="69.1"/>
+		<line class="st0" x1="194.2" y1="61.6" x2="194.2" y2="63.9"/>
+		<line class="st0" x1="177.3" y1="58.1" x2="78.8" y2="58.1"/>
+	</g>
+	<g>
+		<line class="st0" x1="169.6" y1="140.5" x2="143.1" y2="140.5"/>
+		<path class="st0" d="M133.1,140.5h-6.2v-10.6c0-1.4,1.1-2.5,2.5-2.5h52.7c2.4,0,4.3,1.9,4.3,4.3v8.6h-8"/>
+		<path class="st0" d="M181.9,127.4H130v-8.5c0-3.3,2.7-6,6-6h36.3c2.5,0,4.8,1.6,5.7,3.9L181.9,127.4z"/>
+		<circle class="st0" cx="174.2" cy="142.7" r="5.1"/>
+		<circle class="st0" cx="138.2" cy="142.7" r="5.1"/>
+		<line class="st0" x1="169.6" y1="112.9" x2="169.6" y2="127.4"/>
+		<line class="st0" x1="140.8" y1="112.9" x2="140.8" y2="127.4"/>
+		<line class="st0" x1="150.4" y1="112.9" x2="150.4" y2="140.5"/>
+		<line class="st0" x1="160" y1="112.9" x2="160" y2="140.5"/>
+	</g>
+	<g>
+		<line class="st0" x1="187.2" y1="140.3" x2="213.2" y2="140.3"/>
+		<line class="st0" x1="206.9" y1="140.3" x2="206.9" y2="127.2"/>
+		<polygon class="st0" points="216.2,127.2 197.9,127.2 203.9,101.9 216.2,101.9 		"/>
+	</g>
+</g>
+</svg>

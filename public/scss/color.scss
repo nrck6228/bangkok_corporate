@@ -1,0 +1,136 @@
+.bg-color-white{
+    background-color: #fff;
+}
+.bg-color-gray{
+    background-color: #525252;
+}
+
+.bg-color-primary{
+    background-color: $color-primary;
+    color: white;
+}
+
+.bg-color-primary-opacity{
+    background-color: rgba($color: $color-primary, $alpha: 0.8);
+}
+
+.bg-color-secondary{
+    background-color: $color-secondary;
+    color: white;
+}
+
+.bg-color-secondary-opacity{
+    background-color: rgba($color: $color-secondary, $alpha: 0.8);
+}
+
+.color-primary{
+    color: $color-primary !important;
+}
+
+.color-secondary{
+    color: $color-secondary !important;
+}
+
+#header-wrapper{
+    .header-lg{
+        .tools-web{
+            ul{
+                .search-site{
+                    &:hover{
+                        background-color: $color-secondary;
+                    }
+                    &.active{
+                        background-color: $color-primary;
+                    }
+                }
+                .lang-site{
+                    .multi-lang{
+                        background-color: $color-primary;
+                    }
+                    &.active{
+                        background-color: $color-primary;
+                    }
+                }
+            }
+        }
+        .menu-main-wrapper{
+            .sub-menu-main{
+                li{
+                    &.open{
+                        &.show{
+                            background-color: $color-primary;
+                        }
+                        
+                    }
+                    &.list{
+                        &:hover{
+                            background-color: $color-primary;
+                        }
+                    }
+                    &.active{
+                        background-color: $color-primary;
+                    }
+                    .sub-menu-lv2{
+                        .list-menu-lv2{
+                            .sub-menu-lv3{
+                                .list-menu-lv3{
+                                    a{
+                                        &:hover{
+                                            color: $color-secondary;
+                                        }
+                                    }
+                                }
+                            }
+                            &:hover{
+                                a{
+                                    color: $color-secondary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section-search-wrapper{
+            .group-search{
+                .input-custom{
+                    .btn-search{
+                        background-color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Canvas Menu
+.canvas-menu-wrapper{
+    .canvas-menu{
+        .canvas-lang{
+            ul{
+                li{
+                    &.lang{
+                        &.active{
+                            a{
+                                background-color: $color-primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Daterangpicker 
+.daterangepicker td.active, .daterangepicker td.active:hover{
+    background-color: $color-primary !important;
+}
+.daterangepicker td.active.end-date, .daterangepicker td.active.end-date:hover{
+    background-color: $color-primary !important;
+}
+.daterangepicker td.in-range{
+    background-color: $color-secondary !important;
+}
+
+

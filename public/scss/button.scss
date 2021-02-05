@@ -1,0 +1,241 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    width: auto; height: auto;
+    background-color: transparent;
+    border: solid 1px transparent;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    min-width: 150px;
+    height: 4.5rem;
+
+    &:active, &:hover, &:focus {
+        outline: 0!important;
+        outline-offset: 0;
+    }
+
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+    }
+
+    span {         
+        position: relative;
+        display: inline-block;
+        font-size: 1.6rem;
+        line-height: 4.3rem;
+        // stext-transform: uppercase;
+        top: 0; left: 0;
+        width: 100%;
+        padding: 0 15px;
+        transition: 0.3s;
+        text-align: center;
+    }
+}
+
+/*--- btn-primary ---*/
+.btn-primary{
+    border-color: $color-primary;
+}
+.btn-primary::before {
+    background-color: $color-primary;
+    transition: 0.3s ease-in-out;
+}
+.btn-primary span {
+    color: rgba(255, 255, 255, 1);
+    transition: 0.2s 0.1s;
+
+    .st0{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+    .st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st2{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st3{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-miterlimit:10;}
+    .st4{opacity:0.35;fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+}
+.btn-primary span:hover {
+    color: $color-primary;
+    transition: 0.2s 0.1s;
+
+    .st0{fill:none;stroke:$color-primary;stroke-miterlimit:10;}
+    .st1{fill:none;stroke:$color-primary;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st2{fill:none;stroke:$color-primary;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st3{fill:none;stroke:$color-primary;stroke-width:1.5;stroke-miterlimit:10;}
+    .st4{opacity:0.35;fill:none;stroke:$color-primary;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+}
+
+/*--- btn-secondary ---*/
+.btn-secondary{
+    border-color: #7fd18b;
+}
+.btn-secondary::before {
+    background-color: #7fd18b;
+    transition: 0.3s ease-in-out;
+}
+.btn-secondary span {
+    color: $color-primary;
+    transition: 0.2s 0.1s;
+}
+.btn-secondary span:hover {
+    color: $color-secondary;
+    transition: 0.2s 0.1s;
+}
+
+/*--- btn-signup ---*/
+.btn-signup{
+    border-color: rgba(0, 93, 171, 0.8);
+}
+.btn-signup::before {
+    background-color: rgba(0, 93, 171, 0.8);
+    transition: 0.3s ease-in-out;
+}
+.btn-signup span {
+    color: rgba(255, 255, 255, 1);
+    transition: 0.2s 0.1s;
+
+    .st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+
+}
+.btn-signup span:hover {
+    color: rgb(0, 93, 171);
+    transition: 0.2s 0.1s;
+
+    .st0{fill:none;stroke:rgb(0, 93, 171);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st1{fill:none;stroke:rgb(0, 93, 171);stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+
+}
+
+/*--- btn-online ---*/
+.btn-online{
+    border-color: rgba(0, 102, 0, 0.8);
+}
+.btn-online::before {
+    background-color: rgba(0, 102, 0, 0.8);
+    transition: 0.3s ease-in-out;
+}
+.btn-online span {
+    color: rgba(255, 255, 255, 1);
+    transition: 0.2s 0.1s;
+
+    .st0{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+    .st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st2{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st3{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-miterlimit:10;}
+    .st4{opacity:0.35;fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+}
+.btn-online span:hover {
+    color: $color-primary;
+    transition: 0.2s 0.1s;
+
+    .st0{fill:none;stroke:$color-primary;stroke-miterlimit:10;}
+    .st1{fill:none;stroke:$color-primary;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st2{fill:none;stroke:$color-primary;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st3{fill:none;stroke:$color-primary;stroke-width:1.5;stroke-miterlimit:10;}
+    .st4{opacity:0.35;fill:none;stroke:$color-primary;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+}
+
+/*--- btn-readmore ---*/
+.btn-readmore{
+    border-color: $color-text;
+    background-color: $color-primary;
+}
+.btn-readmore::before {
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+.btn-readmore span {
+    color: $color-text;
+    transition: 0.2s 0.1s;
+}
+.btn-readmore span:hover {
+    color: white;
+    transition: 0.2s 0.1s;
+}
+
+/*--- btn-search ---*/
+.btn-search{
+    border-color: $color-text;
+    background-color: $color-primary;
+}
+.btn-search::before {
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+.btn-search span {
+    color: $color-text;
+    transition: 0.2s 0.1s;
+}
+.btn-search span:hover {
+    color: white;
+    transition: 0.2s 0.1s;
+}
+
+/*--- btn-search ---*/
+.btn-f{
+    border: none;
+    background-color: #0076FA;
+}
+.btn-f::before {
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+.btn-f span {
+    color: #0076FA;
+    transition: 0.2s 0.1s;
+}
+.btn-f span:hover {
+    color: white;
+    transition: 0.2s 0.1s;
+}
+
+.btn-g{
+    border: none;
+    background-color: #eb4335;
+}
+.btn-g::before {
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+.btn-g span {
+    color: #eb4335;
+    transition: 0.2s 0.1s;
+}
+.btn-g span:hover {
+    color: white;
+    transition: 0.2s 0.1s;
+}
+
+.btn-close{
+    border: solid 1px #e16500;
+    background-color: white;
+}
+.btn-close::before {
+    background-color: #e16500;
+    transition: 0.3s ease-in-out;
+}
+.btn-close span {
+    color: white;
+    transition: 0.2s 0.1s;
+}
+.btn-close span:hover {
+    color: #e16500;
+    transition: 0.2s 0.1s;
+}
+
+/* 2.hover-filled-slide-up */
+.btn.hover-filled-slide-up::before {
+    top: 0; left: 0; right: 0;
+    height: 100%; width: 100%;
+}
+.btn.hover-filled-slide-up:hover::before {
+    height: 0%;
+}
+
+@include media-breakpoint-down(lg){
+    .btn.hover-filled-slide-up:hover::before{
+        height: 100%;
+    }
+}
+

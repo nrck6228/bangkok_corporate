@@ -1,0 +1,41 @@
+#header-main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding: 40px 190px 40px 230px;
+    pointer-events: none;
+    // background-color: black;
+
+    .header-container{
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: -ms-flexbox;
+        display: flex;
+        height: 50px;
+        pointer-events: auto;
+    }
+
+    .drawer{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .control-container{
+        display: flex;
+        justify-content: flex-end;
+        z-index: 3;
+
+        .btn{
+            margin: 0px 25px 15px;
+        }
+    }
+}
