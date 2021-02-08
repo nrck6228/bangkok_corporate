@@ -784,8 +784,8 @@
     height: 45px;
     text-align: center;
     line-height: 45px;
-    background-color: rgb(0, 93,171);
-    z-index: 1004;
+    background-color: rgba(0, 93, 171, 0.8);
+    z-index: 1005;
     cursor: pointer;
     
     span{
@@ -793,13 +793,6 @@
         font-size: 1.6rem;
         line-height: 2rem;
         font-weight: $font-light;
-    }
-
-    &:hover{
-        background-color: rgba(255, 255, 255, 1);
-        span{
-            color: rgb(0, 93,171);
-        }
     }
 
     .multi-lang{
@@ -811,7 +804,8 @@
         height: auto;
         margin: 0;
         padding: 0;
-        z-index: 1004;
+        z-index: 1005;
+        
         
         a{
             display: block;
@@ -820,9 +814,10 @@
             line-height: 2rem;
             color: white;
             text-align: center;
+            background-color: rgba(0, 93, 171, 0.8);
 
             &:hover{
-                color: rgb(0, 93,171);
+                background-color: rgba(0, 93, 171, 1);
             }
         }
     }

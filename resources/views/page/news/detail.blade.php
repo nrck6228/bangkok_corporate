@@ -293,6 +293,186 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Social  -->
+            <div class="social-container">
+                <div class="shared-email">
+                    <div class="social-wrapper">
+                        <div class="text-social">Share</div>
+                        <ul class="d-flex align-items-center">
+                            <li class="facebook alt-hover">
+                                <a href="#" title="facebook" class="d-flex align-items-center">
+                                    <img src="{{ asset('assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span>5</span> 
+                                </a>
+                            </li>
+                            <li class="twitter alt-hover">
+                                <a href="#" title="twitter" class="d-flex align-items-center">
+                                    <img src="{{ asset('assets/images/icons/icon-social-twitter.svg')}}" alt="icon"><span>5</span> 
+                                </a>
+                            </li>
+                            <li class="line alt-hover">
+                                <a href="#" title="line" class="d-flex align-items-center">
+                                    <img src="{{ asset('assets/images/icons/icon-social-line.svg')}}" alt="icon"><span>5</span> 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="email-link">
+                        <div class="item">
+                            <a href="" class="d-flex align-items-center">
+                                <div class="icon -email">
+                                    <img src="{{ asset('assets/images/icons/icon-email.png')}}" alt="icon">
+                                </div>
+                                <div class="text-email-link">อีเมล</div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="" class="d-flex align-items-center">
+                                <div class="icon -link">
+                                    <img src="{{ asset('assets/images/icons/icon-link.png')}}" alt="icon">
+                                </div>
+                                <div class="text-email-link">Copy Link</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="views-like d-flex align-items-center">
+                    <div class="view-count">
+                        View : <span>1.5K</span>
+                    </div>
+                    <div class="like-count d-flex align-items-center">
+                        <a href="#" title="Love it" data-count="0" class="icon-like">
+                            <img src="{{ asset('assets/images/icons/icon-like.png')}}" alt="icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment -->
+            <div class="comment-container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="content vote">
+                            <div class="container-title">
+                                <div class="title-text">
+                                    <h3 class="title">คุณเห็นด้วยกับข่าวนี้หรือไม่</h3>
+                                </div>
+                            </div>
+                            <form action="">
+                                <div class="list-choice-vote">
+                                    <ul>
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <div class="input-custom">
+                                                <div class="custom-control custom-switch">
+                                                    <input type="radio" class="custom-control-input" id="customSwitch1" name="Ans_Vote">
+                                                    <label class="custom-control-label" for="customSwitch1">เห็นด้วยมาก</label>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="total-vote">(26%)</div> -->
+                                        </li>
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <div class="input-custom">
+                                                <div class="custom-control custom-switch">
+                                                    <input type="radio" class="custom-control-input" id="customSwitch2" name="Ans_Vote">
+                                                    <label class="custom-control-label" for="customSwitch2">ปานกลาง</label>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="total-vote">(24%)</div> -->
+                                        </li>
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <div class="input-custom">
+                                                <div class="custom-control custom-switch">
+                                                    <input type="radio" class="custom-control-input" id="customSwitch3" name="Ans_Vote">
+                                                    <label class="custom-control-label" for="customSwitch3">ไม่เห็นด้วย</label>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="total-vote">(0%)</div> -->
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn-custom justify-between">
+                                    <button class="btn btn-primary hover-filled-slide-up" type="button">
+                                        <span>VOTE</span>
+                                    </button>
+                                    <a href="login" title="SIGN UP" class="btn btn-signup hover-filled-slide-up">
+                                        <span>SIGN IN</span>
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content comment">
+                            <div class="container-title">
+                                <div class="title-text">
+                                    <h3 class="title">ความคิดเห็น</h3>
+                                </div>
+                                <div class="comment-count">5 รายการ</div>
+                            </div>
+                            <div class="sort-order d-flex justify-content-end align-items-center">
+                                <div class="text-order">เรียงลำดับตาม</div>
+                                <div class="slc-custom">
+                                    <select name="" class="slc selectpicker">
+                                        <optgroup label="เรียงลำดับ">
+                                            <option value="">เก่าที่สุด</option>
+                                            <option value="">ใหม่ที่สุด</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-custom">
+                                <textarea class="text-area" name="" id="" rows="3"></textarea>
+                            </div>
+                            <div class="btn-custom">
+                                <button class="btn btn-primary hover-filled-slide-up" type="button">
+                                    <span>SEND</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="user-comment-wrapper">
+                            <ul>
+                                <li>
+                                    <div class="list-comment d-flex align-items-center">
+                                        <div class="image-user">
+                                            <img src="{{ asset('assets/images/icons/icon-user-post.png')}}" alt="icon">
+                                        </div>
+                                        <div class="post-user">
+                                            <span class="name color-secondary">Attapon :</span> Excellent, I like this 
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-comment d-flex align-items-center">
+                                        <div class="image-user">
+                                            <img src="{{ asset('assets/images/icons/icon-user-post.png')}}" alt="icon">
+                                        </div>
+                                        <div class="post-user">
+                                            <span class="name color-secondary">Santanon :</span> เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ 
+                                            มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 
+                                            เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-comment d-flex align-items-center">
+                                        <div class="image-user">
+                                            <img src="{{ asset('assets/images/icons/icon-user-post.png')}}" alt="icon">
+                                        </div>
+                                        <div class="post-user">
+                                            <span class="name color-secondary">Sittichok :</span> Excellent, I like this 
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="load-more">
+                                <a href="javascript: void(0)" title="โหลดเพิ่มเติม" class="btn btn-search hover-filled-slide-up">
+                                    <span>โหลดเพิ่มเติม</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

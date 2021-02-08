@@ -26,7 +26,6 @@
 <script type="text/javascript" rel="preload" src="{{ asset('js/jquery-1.12.3.js') }}"></script>
 <script type="text/javascript" rel="preload" src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script type="text/javascript" rel="preload" src="{{ asset('js/jquery-ui-1.11.4.custom.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
   
 <!-- Bootstrap Select -->
 <script type="text/javascript" src="{{ asset('js/bootstrap-select.min.js') }}"></script>

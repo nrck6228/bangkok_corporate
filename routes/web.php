@@ -96,6 +96,10 @@ Route::any('/search', function () {
     return view('search');
 });
 
+Route::any('/album', function () {
+    return view('album');
+});
 
-
-
+Route::any('/video', function () {
+    return view('video');
+});

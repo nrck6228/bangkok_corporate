@@ -18,16 +18,14 @@
                         <a data-poster="{{ asset('assets/images/news/covid2.jpg')}}" data-sub-html="video caption1" data-html="#video1">
                             <div class="card">
                                 <div class="bg-layer">
-                                    <img src="{{ asset('assets/images/news/covid2.jpg')}}" alt="" class="thumbnail">
+                                    <!-- <img src="{{ asset('assets/images/news/covid2.jpg')}}" alt="" class="thumbnail"> -->
+                                    <video class="lg-video-object lg-html5">
+                                        <source src="assets/videos/sample-mp4-file.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.
+                                    </video>
                                     <div class="readmore-hover">
-                                        <img src="{{ asset('assets/images/icons/icon-play.png')}}" alt="Play Video">
+                                        <!-- <img src="{{ asset('assets/images/icons/icon-play.png')}}" alt="Play Video"> -->
                                     </div>
-                                </div>
-                                <div class="source">
-                                    <span>PR Bangkok</span>
-                                </div>
-                                <div class="time">
-                                    <span>3.42</span>
                                 </div>
                             </div>
                         </a>
