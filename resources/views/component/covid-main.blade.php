@@ -23,9 +23,7 @@
                                         <source src="assets/videos/sample-mp4-file.mp4" type="video/mp4">
                                         Your browser does not support HTML5 video.
                                     </video>
-                                    <div class="readmore-hover">
-                                        <!-- <img src="{{ asset('assets/images/icons/icon-play.png')}}" alt="Play Video"> -->
-                                    </div>
+                                    <div class="readmore-hover"></div>
                                 </div>
                             </div>
                         </a>

@@ -13,14 +13,21 @@
             background-image: url('assets/images/coverpage/bg-main-full.jpg');
         }
 
-        .site-coverpage .wrapper .btn-wrapper .btn-enter a:hover{
+        .btn-wrapper .btn-enter a:hover{
             filter: brightness(125%);
         }
     </style>
 </head>
-<body>
+<body>    
     <div class="site-coverpage">
-        <div class="container">
+        <div class="logo">
+            <a href="/">
+                <img src="{{ asset('assets/images/logo-register.svg')}}" alt="logo">
+            </a>
+        </div>
+
+        <!-- Photo -->
+        <div class="container-photo">
             <div class="wrapper md">
                 <div class="image-wrapper">
                     <img src="{{ asset('assets/images/coverpage/img-main-full.png')}}" alt="icon">               
@@ -57,6 +64,26 @@
                 </div>
             </div>
         </div>
+
+        <!-- Video -->
+        <!-- <div class="container-video">
+            <video autoplay muted loop id="myVideo">
+                <source src="assets/videos/rain.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="btn-wrapper">
+                <div class="btn-enter reflect">
+                    <a href="http://www.bangkok.go.th/main/" style="background-color: #a8600b;">
+                        เข้าสู่เว็บไซต์
+                    </a>
+                </div>
+                <div class="btn-enter reflect">
+                    <a href="http://www.bangkok.go.th/main/index.php?&l=en" style="background-color: #a8600b;">
+                        Enter Site
+                    </a>
+                </div>
+            </div>
+        </div> -->
     </div>
 </body>
 </html>

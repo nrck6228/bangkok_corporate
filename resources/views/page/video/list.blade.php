@@ -51,7 +51,11 @@
                         <div class="col-lg-3 col-md-3" data-sub-html="video caption1" data-html="#video1">
                             <div class="card news-main matchHeight">
                                 <div class="bg-layer">
-                                    <img src="{{ asset('assets/images/infographic/photo1.jpg')}}" alt="" class="thumbnail">
+                                    <video class="lg-video-object lg-html5">
+                                        <source src="assets/videos/sample-mp4-file.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                    <div class="readmore-hover"></div>
                                 </div>
                                 <div class="source">
                                     <span>PR Bangkok</span>
@@ -61,7 +65,11 @@
                         <div class="col-lg-3 col-md-3" data-sub-html="video caption1" data-html="#video2">
                             <div class="card news-main matchHeight">
                                 <div class="bg-layer">
-                                    <img src="{{ asset('assets/images/infographic/photo2.jpg')}}" alt="" class="thumbnail">
+                                    <video class="lg-video-object lg-html5">
+                                        <source src="assets/videos/sample-mp4-file.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                    <div class="readmore-hover bg-icon"></div>
                                 </div>
                                 <!-- <div class="source">
                                     <span>PR Bangkok</span>

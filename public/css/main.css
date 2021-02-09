@@ -14138,11 +14138,12 @@ a.ui-button:active,
         -ms-transform: translate(0, 0);
         transform: translate(0, 0);
         width: 100%;
-        height: 100%;
-        background-image: url("../../assets/images/icons/icon-play.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 52px 52px; }
+        height: 100%; }
+        .page .homepage-section .container-report--video .container-news .card .readmore-hover.bg-icon {
+          background-image: url("../../assets/images/icons/icon-play.png");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 52px 52px; }
   .page .container-news {
     position: relative; }
     .page .container-news .card {
@@ -14214,6 +14215,13 @@ a.ui-button:active,
           -webkit-transition: all 0.5s ease-in-out;
           -o-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out; }
+        .page .container-news .card .bg-layer video, .page .container-news .card .bg-layer iframe {
+          width: 100%;
+          height: 250px;
+          opacity: 0.8;
+          -webkit-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out; }
       .page .container-news .card .content-layer {
         position: absolute;
         bottom: 0;
@@ -14275,20 +14283,22 @@ a.ui-button:active,
             color: #006600; }
       .page .container-news .card .readmore-hover {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        top: 0;
+        left: 0;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        width: 100%;
+        height: 100%;
         display: block;
-        width: 52px;
-        height: 52px;
         -webkit-transition: all 0.5s ease-in-out;
         -o-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out; }
-        .page .container-news .card .readmore-hover img {
-          width: 100%;
-          height: 100%; }
+        .page .container-news .card .readmore-hover.bg-icon {
+          background-image: url("../../assets/images/icons/icon-play.png");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 52px 52px; }
       .page .container-news .card.news-main .content-layer .caption {
         position: relative; }
         .page .container-news .card.news-main .content-layer .caption .flex-wrap {
