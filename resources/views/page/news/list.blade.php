@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="input-custom">
-                            <input id="startDate" class="form-control" type="text" name="" value="" placeholder="วว/ดด/ปป" />
+                            <input id="startDate" class="form-control error" type="text" name="" value="" placeholder="วว/ดด/ปป" />
                             <span class="icon-calendar" id="icon_startDate"></span>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                                     <div class="caption">
                                         <div class="flex-wrap">
                                             <div class="date">
-                                                <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                <span>25 พ.ย. 2563</span>
                                             </div>
                                             <div class="social-wrapper">
                                                 <ul class="d-flex align-items-center">
@@ -105,7 +105,7 @@
                                     <div class="caption">
                                         <div class="flex-wrap">
                                             <div class="date">
-                                                <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                <span>25 พ.ย. 2563</span>
                                             </div>
                                             <div class="social-wrapper">
                                                 <ul class="d-flex align-items-center">
@@ -142,7 +142,7 @@
                                     <div class="caption">
                                         <div class="flex-wrap">
                                             <div class="date">
-                                                <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                <span>25 พ.ย. 2563</span>
                                             </div>
                                             <div class="social-wrapper">
                                                 <ul class="d-flex align-items-center">
@@ -179,7 +179,7 @@
                                     <div class="caption">
                                         <div class="flex-wrap">
                                             <div class="date">
-                                                <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                <span>25 พ.ย. 2563</span>
                                             </div>
                                             <div class="social-wrapper">
                                                 <ul class="d-flex align-items-center">
@@ -216,7 +216,7 @@
                                     <div class="caption">
                                         <div class="flex-wrap">
                                             <div class="date">
-                                                <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                <span>25 พ.ย. 2563</span>
                                             </div>
                                             <div class="social-wrapper">
                                                 <ul class="d-flex align-items-center">
@@ -253,7 +253,7 @@
                                     <div class="caption">
                                         <div class="flex-wrap">
                                             <div class="date">
-                                                <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                <span>25 พ.ย. 2563</span>
                                             </div>
                                             <div class="social-wrapper">
                                                 <ul class="d-flex align-items-center">

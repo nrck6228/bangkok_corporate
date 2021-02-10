@@ -46,7 +46,7 @@
                                                     <div class="caption">
                                                         <div class="flex-wrap">
                                                             <div class="date">
-                                                                <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                                <span>25 พ.ย. 2563</span>
                                                             </div>
                                                             <div class="social-wrapper">
                                                                 <ul class="d-flex align-items-center">
@@ -85,7 +85,7 @@
                                                             <div class="caption">
                                                                 <div class="flex-wrap">
                                                                     <div class="date">
-                                                                        <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                                        <span>25 พ.ย. 2563</span>
                                                                     </div>
                                                                     <div class="social-wrapper">
                                                                         <ul class="d-flex align-items-center">
@@ -123,7 +123,7 @@
                                                             <div class="caption">
                                                                 <div class="flex-wrap">
                                                                     <div class="date">
-                                                                        <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                                        <span>25 พ.ย. 2563</span>
                                                                     </div>
                                                                     <div class="social-wrapper">
                                                                         <ul class="d-flex align-items-center">
@@ -185,7 +185,7 @@
                                                     <div class="caption">
                                                         <div class="flex-wrap">
                                                             <div class="date">
-                                                                <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                                <span>25 พ.ย. 2563</span>
                                                             </div>
                                                             <div class="social-wrapper">
                                                                 <ul class="d-flex align-items-center">
@@ -224,7 +224,7 @@
                                                             <div class="caption">
                                                                 <div class="flex-wrap">
                                                                     <div class="date">
-                                                                        <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                                        <span>25 พ.ย. 2563</span>
                                                                     </div>
                                                                     <div class="social-wrapper">
                                                                         <ul class="d-flex align-items-center">
@@ -262,7 +262,7 @@
                                                             <div class="caption">
                                                                 <div class="flex-wrap">
                                                                     <div class="date">
-                                                                        <span>ข่าววันที่ : 25 พ.ย.</span>
+                                                                        <span>25 พ.ย. 2563</span>
                                                                     </div>
                                                                     <div class="social-wrapper">
                                                                         <ul class="d-flex align-items-center">

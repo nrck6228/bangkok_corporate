@@ -50,9 +50,15 @@
         background-color: white;
     
         &:focus{
+            border: solid 1px $color-primary;
             border-bottom: solid 2px $color-primary;
             outline: none !important;
             box-shadow: none !important;
+        }
+
+        &.error{
+            border: solid 1px red;
+            border-bottom: solid 2px red;
         }
     }
 
@@ -71,6 +77,13 @@
 
         &:focus{
             outline: none;
+            border: solid 1px $color-primary;
+            border-bottom: solid 2px $color-primary;
+        }
+
+        &.error{
+            border: solid 1px red;
+            border-bottom: solid 2px red;
         }
     }
 
@@ -244,12 +257,19 @@
 
         &:focus{
             outline: none;
+            border: solid 1px $color-primary;
+            border-bottom: solid 2px $color-primary;
         }
 
         optgroup { 
             font-weight: $font-regular;
             font-size: 1.8rem;
             line-height: 2rem;
+        }
+
+        &.error{
+            border: solid 1px red;
+            border-bottom: solid 2px red;
         }
     }
 }

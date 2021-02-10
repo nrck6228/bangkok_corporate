@@ -11792,10 +11792,14 @@ template {
     border-bottom: solid 2px #006600;
     background-color: white; }
     .input-custom .form-control:focus {
+      border: solid 1px #006600;
       border-bottom: solid 2px #006600;
       outline: none !important;
       -webkit-box-shadow: none !important;
       box-shadow: none !important; }
+    .input-custom .form-control.error {
+      border: solid 1px red;
+      border-bottom: solid 2px red; }
   .input-custom .text-area {
     resize: none;
     width: 100%;
@@ -11809,7 +11813,12 @@ template {
     border-bottom: solid 2px #006600;
     background-color: white; }
     .input-custom .text-area:focus {
-      outline: none; }
+      outline: none;
+      border: solid 1px #006600;
+      border-bottom: solid 2px #006600; }
+    .input-custom .text-area.error {
+      border: solid 1px red;
+      border-bottom: solid 2px red; }
   .input-custom .icon-calendar {
     position: absolute;
     top: 50%;
@@ -11967,11 +11976,16 @@ template {
     text-overflow: ellipsis;
     border-bottom: solid 2px #006600; }
     .slc-custom .slc:focus {
-      outline: none; }
+      outline: none;
+      border: solid 1px #006600;
+      border-bottom: solid 2px #006600; }
     .slc-custom .slc optgroup {
       font-weight: 400;
       font-size: 1.8rem;
       line-height: 2rem; }
+    .slc-custom .slc.error {
+      border: solid 1px red;
+      border-bottom: solid 2px red; }
 
 .input-custom .style-input {
   position: relative;
