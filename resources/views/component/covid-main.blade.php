@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
-                <div class="container-report--counter matchHeight" data-aos="fade-up">
+                <div class="container-report--counter" data-aos="fade-up">
                     <div class="container-news">
                         <div class="card">
                             <div class="bg-layer">
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="container-report--video matchHeight" data-aos="fade-up" data-aos-delay="300">
+                <div class="container-report--video" data-aos="fade-up" data-aos-delay="300">
                     <div class="container-news" id="video-gallery">
                         <a href="https://www.youtube.com/watch?v=Agblfa8RjeY&t=1s">
                             <div class="card">
