@@ -660,6 +660,12 @@
             }
         }
 
+        .video-thunmbnail{
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+
         @include media-breakpoint-down(sm){
         }
     }
@@ -1136,6 +1142,7 @@
 
                 img{
                     position: relative;
+                    width: 230px !important;
 
                     &:first-of-type {
                         -webkit-animation: float-y 4s ease infinite 0s;
@@ -1182,7 +1189,23 @@
                     }
 
                     @media screen and (max-width: 1440px){
-                        visibility: hidden;
+                        width: 190px !important;
+                    }
+
+                    @media screen and (max-width: 1366px){
+                        width: 175px !important;
+                    }
+
+                    @media screen and (max-width: 1024px){
+                        width: 160px !important;
+                    }
+
+                    @media screen and (max-width: 999px){
+                        width: 240px !important;
+                    }
+
+                    @media screen and (max-width: 768px){
+                        visibility: hidden !important;
                     }
                 }
             }

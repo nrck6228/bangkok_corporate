@@ -15,14 +15,10 @@
             <div class="col-lg-6">
                 <div class="container-report--video matchHeight" data-aos="fade-up" data-aos-delay="300">
                     <div class="container-news" id="video-gallery">
-                        <a data-poster="{{ asset('assets/images/news/covid2.jpg')}}" data-sub-html="video caption1" data-html="#video1">
+                        <a href="https://www.youtube.com/watch?v=Agblfa8RjeY&t=1s">
                             <div class="card">
                                 <div class="bg-layer">
-                                    <!-- <img src="{{ asset('assets/images/news/covid2.jpg')}}" alt="" class="thumbnail"> -->
-                                    <video class="lg-video-object lg-html5">
-                                        <source src="assets/videos/sample-mp4-file.mp4" type="video/mp4">
-                                        Your browser does not support HTML5 video.
-                                    </video>
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Agblfa8RjeY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <div class="readmore-hover"></div>
                                 </div>
                             </div>

@@ -49,20 +49,7 @@
                 <div class="container-news">
                     <div class="row" id="video-gallery">
                         <div class="col-lg-3 col-md-3" data-sub-html="video caption1" data-html="#video1">
-                            <div class="card news-main matchHeight">
-                                <div class="bg-layer">
-                                    <video class="lg-video-object lg-html5">
-                                        <source src="assets/videos/sample-mp4-file.mp4" type="video/mp4">
-                                        Your browser does not support HTML5 video.
-                                    </video>
-                                    <div class="readmore-hover"></div>
-                                </div>
-                                <div class="source">
-                                    <span>PR Bangkok</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3" data-sub-html="video caption1" data-html="#video2">
+                            <img src="../../assets/images/news/photo3.jpg" alt="" class="video-thunmbnail">
                             <div class="card news-main matchHeight">
                                 <div class="bg-layer">
                                     <video class="lg-video-object lg-html5">
@@ -76,6 +63,14 @@
                                 </div> -->
                             </div>
                         </div>
+                        <a class="col-lg-3 col-md-3" href="https://www.youtube.com/watch?v=Agblfa8RjeY&t=1s">
+                            <div class="card news-main matchHeight">
+                                <div class="bg-layer">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Agblfa8RjeY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div class="readmore-hover"></div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
@@ -98,13 +93,7 @@
 
 <!-- Hidden video div -->
 <div style="display:none;" id="video1">
-    <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
-        <source src="assets/videos/sample-mp4-file.mp4" type="video/mp4">
-         Your browser does not support HTML5 video.
-    </video>
-</div>
-<div style="display:none;" id="video2">
-    <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+    <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls>
         <source src="assets/videos/sample-mp4-file.mp4" type="video/mp4">
          Your browser does not support HTML5 video.
     </video>
