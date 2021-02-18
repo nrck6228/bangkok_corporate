@@ -21,16 +21,6 @@
                             <div class="date">
                                 14 ม.ค. 2564
                             </div>
-                            <div class="social-wrapper">
-                                <ul class="d-flex align-items-center">
-                                    <li class="facebook d-flex align-items-center not-hover">
-                                        <img src="{{ asset('../../assets/images/icons/icon-social-facebook.svg')}}" alt="icon"><span class="color-secondary">5</span> 
-                                    </li>
-                                    <li class="twitter d-flex align-items-center not-hover">
-                                        <img src="{{ asset('../../assets/images/icons/icon-social-twitter.svg')}}" alt="icon"> <span class="color-secondary">5</span> 
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
 
@@ -361,7 +351,7 @@
                                                     <label class="custom-control-label" for="customSwitch1">เห็นด้วยมาก</label>
                                                 </div>
                                             </div>
-                                            <!-- <div class="total-vote">(26%)</div> -->
+                                            <div class="total-vote">(26%)</div>
                                         </li>
                                         <li class="d-flex justify-content-between align-items-center">
                                             <div class="input-custom">
@@ -370,7 +360,7 @@
                                                     <label class="custom-control-label" for="customSwitch2">ปานกลาง</label>
                                                 </div>
                                             </div>
-                                            <!-- <div class="total-vote">(24%)</div> -->
+                                            <div class="total-vote">(24%)</div>
                                         </li>
                                         <li class="d-flex justify-content-between align-items-center">
                                             <div class="input-custom">
@@ -379,7 +369,7 @@
                                                     <label class="custom-control-label" for="customSwitch3">ไม่เห็นด้วย</label>
                                                 </div>
                                             </div>
-                                            <!-- <div class="total-vote">(0%)</div> -->
+                                            <div class="total-vote">(0%)</div>
                                         </li>
                                     </ul>
                                 </div>
@@ -387,9 +377,6 @@
                                     <button class="btn btn-primary hover-filled-slide-up" type="button">
                                         <span>VOTE</span>
                                     </button>
-                                    <a href="login" title="SIGN UP" class="btn btn-signup hover-filled-slide-up">
-                                        <span>SIGN IN</span>
-                                    </a>
                                 </div>
                             </form>
                         </div>
@@ -419,6 +406,9 @@
                             <div class="btn-custom">
                                 <button class="btn btn-primary hover-filled-slide-up" type="button">
                                     <span>SEND</span>
+                                </button>
+                                <button class="btn btn-signup hover-filled-slide-up" onclick="window.location.href='login'">
+                                    <span>เข้าสู่ระบบเพื่อแสดงความคิดเห็น</span>
                                 </button>
                             </div>
                         </div>

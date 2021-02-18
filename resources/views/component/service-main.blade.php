@@ -33,11 +33,7 @@
                             <div class="title-wrap">
                                 <div class="title-text">
                                     <h2>บริการกรุงเทพมหานคร</h2>
-                                    <div class="btn-wrap">
-                                        <a href="#" title="ดูทั้งหมด" class="btn btn-readmore hover-filled-slide-up">
-                                            <span>ดูทั้งหมด</span>
-                                        </a>
-                                    </div>
+                                    <p>จุดบริการด่วนกรุงเทพมหานคร (BMA Express Service)</p>
                                 </div>
                             </div>
                         </div>
@@ -162,11 +158,7 @@
                         <div class="col-lg-6 offset-lg-6">
                             <div class="title-text">
                                 <h2>BANGKOK Highlight</h2>
-                                <div class="btn-wrap">
-                                    <a href="#" title="ดูทั้งหมด" class="btn btn-readmore hover-filled-slide-up">
-                                        <span>ดูทั้งหมด</span>
-                                    </a>
-                                </div>
+                                <p>ห้องเรียน วิถี New Normal, Social Distancing</p>
                             </div>
                         </div>
                     </div>

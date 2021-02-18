@@ -66,44 +66,6 @@ $(function () {
         
 });
 
-// Slider
-$(function (){
-    var $slider = $('.slider');
-
-    if ($slider.length) {
-        var currentSlide;
-        var slidesCount;
-        var sliderCounter = document.createElement('div');
-        sliderCounter.classList.add('slider__counter');
-    
-        var updateSliderCounter = function(slick, currentIndex) {
-            currentSlide = slick.slickCurrentSlide() + 1;
-            slidesCount = slick.slideCount;
-            // $(sliderCounter).html(' BKK News ' + '<br>' + currentSlide + '/' + slidesCount)
-            $(sliderCounter).html(currentSlide + '/' + slidesCount)
-        };
-
-        $slider.on('init', function(event, slick) {
-            $slider.append(sliderCounter);
-            updateSliderCounter(slick);
-        });
-
-        $slider.on('afterChange', function(event, slick, currentSlide) {
-            updateSliderCounter(slick, currentSlide);
-        });
-
-        $slider.slick({
-            infinite: false,
-            autoplay:true,
-            speed: 1000
-        });
-    }
-
-    if($('.slick-slide').length == 1){
-      $('.slider__counter').css('display','none');
-    }
-})
-
 // lang
 $(function () {
     $('.control-container_lang').click(function(){
@@ -111,14 +73,6 @@ $(function () {
         $('.multi-lang').slideToggle();
     });
 });
-
-// lang mobile
-// $(function () {
-//   $('.control-container_lang').click(function(){
-//       $(this).toggleClass('active');
-//       $('.multi-lang').slideToggle();
-//   });
-// });
 
 //slide
 $(function () {
@@ -138,58 +92,6 @@ $(function () {
     var slick_dots = $('.slick-dots li').size();
     var calculate_dots =  100 / slick_dots;
     $('.slick-dots li').css('width', calculate_dots + '%');
-
-    // banner link
-    const check_list_1 = $('#slide_1').children().length;
-    $('#slide_1').on('init', function (event, slick, direction) {
-        if (check_list_1 < 4) {
-            $('#action-slide_1').parents('.action-slide .slide-wrapper').css('display','none');
-        }else{
-            $('#action-slide_1').parents('.action-slide .slide-wrapper').show();
-        }
-    });
-
-    $('#slide_1').slick({
-        autoplay: false,
-        autoplaySpeed: 6000,
-        infinite: false,
-        dots: false,
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: $('#action-slide_1 .slide-prev'),
-        nextArrow: $('#action-slide_1 .slide-next'),
-    });
-
-    // คำถามที่พบบ่อย
-    const check_list_2 = $('#slide_2').children('.item').length;
-    $('#slide_2').on('init', function (event, slick, direction) {
-        if (check_list_2 < 3) {
-            $('#action-slide_2').parents('.action-slide').css('display','none');
-        }else{
-            $('#action-slide_2').parents('.action-slide').show();
-        }
-    });
-    $('#slide_2').slick({
-        autoplay: false,
-        autoplaySpeed: 6000,
-        infinite: false,
-        dots: false,
-        arrows: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        prevArrow: $('#action-slide_2 .slide-prev'),
-        nextArrow: $('#action-slide_2 .slide-next'),
-        responsive: [
-            {
-              breakpoint: 481,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-        ]
-    });
 });
 
 $(function () {

@@ -752,6 +752,35 @@
         margin: 0 0 0 30px;
     }
 
+    .setting-container{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        background-color: $color-blue;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+
+        a{
+            display: block;
+            padding: 10px;
+            color: white;
+            background-color: $color-blue;
+
+            &:hover{
+                background-color: $color-primary;
+            }
+        }
+
+        &.js-box{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
     @include media-breakpoint-down(lg) {
         position: fixed;
         top: 25px;

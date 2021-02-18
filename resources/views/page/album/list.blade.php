@@ -54,7 +54,14 @@
                                     <img src="{{ asset('assets/images/infographic/photo1.jpg')}}" alt="" class="thumbnail">
                                 </a>
                                 <div class="source">
-                                    <span>PR Bangkok</span>
+                                    <span>25 พ.ย. 2563</span>
+                                </div>
+                                <div class="content-layer">
+                                    <div class="title">
+                                        <span>
+                                            กทม. ตรวจสอบสภาพรถยนต์ หน่วยงานในสังกัด ลดปัญหาฝุ่นลดมลพิษ PM2.5
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -63,9 +70,16 @@
                                 <a id="dynamic2" href="javascript:void(0)" title="ไตเติ้ลข่าวแบบสั้น" class="bg-layer">
                                     <img src="{{ asset('assets/images/infographic/photo2.jpg')}}" alt="" class="thumbnail">
                                 </a>
-                                <!-- <div class="source">
-                                    <span>PR Bangkok</span>
-                                </div> -->
+                                <div class="source">
+                                    <span>25 พ.ย. 2563</span>
+                                </div>
+                                <div class="content-layer">
+                                    <div class="title">
+                                        <span>
+                                            กทม. ตรวจสอบสภาพรถยนต์ หน่วยงานในสังกัด ลดปัญหาฝุ่นลดมลพิษ PM2.5
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

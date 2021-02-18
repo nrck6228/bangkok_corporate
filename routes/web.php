@@ -80,6 +80,10 @@ Route::any('/forgot', function () {
     return view('forgot-password');
 });
 
+Route::any('/change', function () {
+    return view('change-password');
+});
+
 Route::any('/register', function () {
     return view('register');
 });
@@ -102,4 +106,8 @@ Route::any('/album', function () {
 
 Route::any('/video', function () {
     return view('video');
+});
+
+Route::any('/organization', function () {
+    return view('organization');
 });

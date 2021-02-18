@@ -108,34 +108,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
-            <div class="col-lg-6 offset-lg-6">
-                <div class="social-wrapper">
-                    <ul>
-                        <li class="mail">
-                            <a href="#" title="facebook">
-                                <img src="{{ asset('assets/images/icons/icon-mail-footer.svg')}}" alt="icon">
-                            </a>
-                        </li>
-                        <li class="facebook">
-                            <a href="#" title="facebook">
-                                <img src="{{ asset('assets/images/icons/icon-social-facebook.svg')}}" alt="icon">
-                            </a>
-                        </li>
-                        <li class="twitter">
-                            <a href="#" title="twitter">
-                                <img src="{{ asset('assets/images/icons/icon-social-twitter.svg')}}" alt="icon">
-                            </a>
-                        </li>
-                        <li class="line">
-                            <a href="#" title="line">
-                                <img src="{{ asset('assets/images/icons/icon-social-line.svg')}}" alt="icon">
-                            </a>
-                        </li>
-                    </ul>
-                </div> 
-            </div>
-        </div> -->
     </div>
 </div>
 

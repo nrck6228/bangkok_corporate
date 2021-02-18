@@ -27,9 +27,9 @@
                             <div class="container-fluid">
                                 <nav class="nav-select"> 
                                     <ul class="nav-select_list">
-                                        <li><a href="#nogo" title="ชื่อเมนู" class="active">ภาพกิจกรรม 1</a></li>
-                                        <li><a href="#nogo" title="ชื่อเมนู">ภาพกิจกรรม 2</a></li>
-                                        <li><a href="#nogo" title="ชื่อเมนู">ภาพกิจกรรม 3</a></li>
+                                        <li><a href="#nogo" title="ประจำปี" class="active">ประจำปี 2563</a></li>
+                                        <li><a href="#nogo" title="ประจำปี">ประจำปี 2562</a></li>
+                                        <li><a href="#nogo" title="ประจำปี">ประจำปี 2561</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -70,18 +70,16 @@
                 dynamic: true,
                 dynamicEl: [{
                     src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg',
+                    subHtml: '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
                 },{
-                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
-                },{
-                    html: '#video2',
                     thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg'
+                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
+                    subHtml: '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
                 },{
                     src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg',
+                    subHtml: '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
                 }],
                 slideEndAnimatoin: false,
                 loop: false,
@@ -95,14 +93,12 @@
                 dynamic: true,
                 dynamicEl: [{
                     src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg'
-                },{
-                    src: 'https://www.youtube.com/watch?v=meBbDqAXago',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
-                    poster: 'https://sachinchoolur.github.io/lightGallery/static/img/videos/y-video1-cover.jpg'
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg',
+                    subHtml: '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
                 },{
                     src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
-                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg'
+                    thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg',
+                    subHtml: '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
                 }],
                 slideEndAnimatoin: false,
                 loop: false,

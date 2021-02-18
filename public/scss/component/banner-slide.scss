@@ -334,6 +334,201 @@
     }
 }
 
+.page{
+    .homepage-section{
+        &.section--intro{
+            .swiper-container{
+                position: relative;
+                height: 100vh;
+
+                // .video-responsive {
+                //     padding-bottom: 56.25%;
+                //     position: relative;
+                //     width: 100%;
+                // }
+                
+                // .canvas,
+                // .video {
+                //     height: 100%;
+                //     left: 0;
+                //     position: absolute;
+                //     top: 0;
+                //     width: 100%;
+                //     background: #000;
+                //     z-index: 5;
+                // }
+
+
+                .swiper-scrollbar{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+
+                .swiper-button-next, .swiper-button-prev{
+                    position: absolute;
+                    top: 50%;
+                    width: 45px;
+                    height: 45px;
+                    margin: 0;
+                    z-index: 10;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    &:after{
+                        display: none;
+                    }
+                }
+
+                .swiper-button-prev {
+                    left: auto;
+                    top: auto;
+                    right: 107px;
+                    bottom: 30px;
+                    background-image: url('../../assets/images/icons/icon-slick-arrow-prev.svg');
+                    background-repeat: no-repeat;
+                    background-position: 0 0;
+                }
+              
+                .swiper-button-next {
+                    top: auto;
+                    right: 60px;
+                    bottom: 30px;
+                    background-image: url('../../assets/images/icons/icon-slick-arrow-next.svg');
+                    background-repeat: no-repeat;
+                    background-position: 0 0;
+                }
+
+                .swiper-pagination-fraction{
+                    width: auto;
+                    right: 167px;
+                    bottom: 30px;
+                    left: auto;
+                    font-size: 2rem;
+                    line-height: 2.4rem;
+                    font-weight: $font-light;
+                    color: #fff;
+                    mix-blend-mode: difference;
+                    pointer-events: none;
+
+                    @media only screen and (max-width: 1366px) {
+                        right: 175px;
+                    }
+            
+                    @include media-breakpoint-down(sm){
+                        right: 15px;
+                        bottom: 15px;
+                    }
+                }
+
+                img{
+                    width: 100%;
+                }
+
+                video{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 100;
+                    outline: none !important;
+                }
+        
+                audio{
+                    position: absolute;
+                    left: 30px;
+                    bottom: 30px;
+                    width: 250px;
+                    height: 50px;
+                    z-index: 102;
+                    outline: none !important;
+                }
+
+                .caption-container{
+                    position: absolute;
+                    width: auto;
+                    height: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    z-index: 101;
+                }
+        
+                .caption-table{
+                    display: table;
+                    width: auto;
+                    height: auto;
+                    padding: 0;
+                }
+        
+                .caption-cell{
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 50px 135px;
+                    text-align: left;
+                    font-weight: $font-medium;
+                    font-size: 6rem;
+                    line-height: 6.4rem;
+                    color: white;
+                    pointer-events: none;
+        
+                    .title{
+                        font-weight: $font-medium;
+                        font-size: 6rem;
+                        line-height: 6.4rem;
+                        color: white;
+                        pointer-events: none;
+                    }
+                }
+
+                @media only screen and (max-width: 1366px) {
+                    .swiper-button-prev {
+                        right: 105px;
+                    }
+                    .swiper-button-next{
+                        right: 30px;
+                    }
+                }
+
+                @include media-breakpoint-down(lg) {
+                    height: 575px;
+                }
+        
+                @include media-breakpoint-down(md) {
+                    height: 430px;
+
+                    .caption-cell{
+                        padding: 50px;
+                    }
+                }
+
+                @include media-breakpoint-down(sm){
+                    height: 230px;
+
+                    .swiper-button-prev {
+                        display: none !important;
+                    }
+                    .swiper-button-next{
+                        display: none !important;
+                    }
+
+                    .caption-cell{
+                        padding: 15px;
+                        font-size: 3rem;
+                        line-height: 3.4rem;
+        
+                        .title{
+                            font-size: 3rem;
+                            line-height: 3.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .scroll-down{
     position: absolute;
     bottom: 30px;
@@ -347,6 +542,7 @@
     color: white;
     visibility: hidden;
     opacity: 0;
+    z-index: 2;
 
     .vert-move{
         padding: 15px 20px;

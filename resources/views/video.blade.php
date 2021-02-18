@@ -27,9 +27,9 @@
                             <div class="container-fluid">
                                 <nav class="nav-select"> 
                                     <ul class="nav-select_list">
-                                        <li><a href="#nogo" title="ชื่อเมนู" class="active">สถานีวิดีโอ 1</a></li>
-                                        <li><a href="#nogo" title="ชื่อเมนู">สถานีวิดีโอ 2</a></li>
-                                        <li><a href="#nogo" title="ชื่อเมนู">สถานีวิดีโอ 3</a></li>
+                                        <li><a href="#nogo" title="แคตตาล็อก" class="active">แคตตาล็อก 1</a></li>
+                                        <li><a href="#nogo" title="แคตตาล็อก">แคตตาล็อก 2</a></li>
+                                        <li><a href="#nogo" title="แคตตาล็อก">แคตตาล็อก 3</a></li>
                                     </ul>
                                 </nav>
                             </div>

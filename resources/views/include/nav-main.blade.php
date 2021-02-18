@@ -384,6 +384,12 @@
 </div>
 
 <div class="control-container">
+    <div class="btn btn-signup hover-filled-slide-up" id="setting">
+        <span>ทดสอบ ระบบ</span>
+        <div class="setting-container">
+            <a href="change" title="เปลี่ยนรหัสผ่าน">เปลี่ยนรหัสผ่าน</a>
+        </div>
+    </div>
     <a href="login" title="SIGN UP" class="btn btn-signup hover-filled-slide-up">
         <span><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
@@ -435,5 +441,10 @@
         $(this).toggleClass("btn-open");
         e.preventDefault();
         $("body").toggleClass("nav-open");
+    });
+
+    $('#setting').click(function() {
+        $( '.setting-container' ).toggleClass('js-box');
+        e.preventDefault();
     });
 </script>
