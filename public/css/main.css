@@ -17829,6 +17829,8 @@ Due to the split circle of progress-left and progress right, we must use the ani
 .page .homepage-section.section--intro .swiper-container {
   position: relative;
   height: 100vh; }
+  .page .homepage-section.section--intro .swiper-container.swiper-container-flip {
+    overflow: hidden; }
   .page .homepage-section.section--intro .swiper-container .swiper-scrollbar {
     visibility: hidden;
     opacity: 0; }

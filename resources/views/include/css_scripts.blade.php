@@ -154,11 +154,11 @@
         // },
 
         //Flip
-        // effect: 'flip',
-        // grabCursor: true,
-        // pagination: {
-        //     el: '.swiper-pagination',
-        // },
+        effect: 'flip',
+        grabCursor: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
 
         // Cube
         // effect: 'cube',

@@ -358,6 +358,10 @@
                 //     z-index: 5;
                 // }
 
+                &.swiper-container-flip{
+                    overflow: hidden;
+                }
+
 
                 .swiper-scrollbar{
                     visibility: hidden;
