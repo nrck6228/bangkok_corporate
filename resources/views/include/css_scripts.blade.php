@@ -179,6 +179,24 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+
+        on: {
+            slideChange: function () {
+            console.log('Hello World') 
+            },
+        }
+
+        // on: {
+        //     slideChange: function (el) {
+        //     console.log('1');
+        //     $('.swiper-slide').each(function () {
+        //         var audioPlayer = $(this).find('audio').get(0);
+        //         if (audioPlayer) {
+        //             audioPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        //         }
+        //     });
+        //     },
+        // },
     });
 </script>
 <script>

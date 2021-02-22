@@ -104,7 +104,7 @@
                                     <div class="tab-pane fade" id="bkk-news2" role="tabpanel" aria-labelledby="bkk-news2-tab">
                                         <div class="gallery-section">
                                             <div class="row" id="video-gallery">
-                                                <a href="https://youtu.be/y7N-wiQod_8" class="col-lg-3">
+                                                <!-- <a href="https://youtu.be/y7N-wiQod_8" class="col-lg-3">
                                                     <div class="card">
                                                         <div class="bg-layer">
                                                             <img src="{{ asset('assets/images/news/photo4.jpg')}}" alt="" class="thumbnail">
@@ -122,6 +122,26 @@
                                                             <div class="readmore-hover">
                                                                 <img src="{{ asset('assets/images/icons/icon-play.png')}}" alt="" class="icon">
                                                             </div>
+                                                        </div>
+                                                    </div>
+                                                </a> -->
+                                                <div class="col-lg-3 col-md-3" data-html="#video1" data-sub-html="video caption1">
+                                                    <img src="../../assets/images/news/photo3.jpg" alt="" class="video-thunmbnail">
+                                                    <div class="card matchHeight">
+                                                        <div class="bg-layer">
+                                                            <video class="lg-video-object lg-html5">
+                                                                <source src="assets/videos/sample-mp4-file.mp4" type="video/mp4">
+                                                                Your browser does not support HTML5 video.
+                                                            </video>
+                                                            <div class="readmore-hover bg-icon"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="col-lg-3 col-md-3" href="https://www.youtube.com/watch?v=Agblfa8RjeY&t=1s" data-sub-html="video caption2">
+                                                    <div class="card matchHeight">
+                                                        <div class="bg-layer">
+                                                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Agblfa8RjeY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                            <div class="readmore-hover"></div>
                                                         </div>
                                                     </div>
                                                 </a>

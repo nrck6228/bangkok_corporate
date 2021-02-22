@@ -523,7 +523,6 @@
                 .thumbnail{
                     width: 100%;
                     max-width: 100%;
-                    // object-fit: cover;
                     opacity: 0.8;
                     transition: all 0.5s ease-in-out;
                 }
@@ -637,6 +636,10 @@
             }
 
             &.news-main{
+                .bg-layer {
+                    // height: 515px;
+                    // overflow: hidden;
+                }
                 .content-layer{
                     .caption{
                         position: relative;
@@ -653,6 +656,11 @@
 
             &.news-list{
                 margin-bottom: 25px;
+
+                .bg-layer {
+                    // height: 245px;
+                    // overflow: hidden;
+                }
 
                 .content-layer{
                     position: relative;
@@ -705,15 +713,15 @@
                     }
                 }
             }
+
+            @include media-breakpoint-down(lg){
+            }
         }
 
         .video-thunmbnail{
             display: none;
             visibility: hidden;
             opacity: 0;
-        }
-
-        @include media-breakpoint-down(sm){
         }
     }
 
@@ -2093,7 +2101,7 @@
                         max-width: 100%;
                         height: 100%;
                         object-fit: cover;
-                    }
+                    }                
                 }
     
                 .readmore-hover{
@@ -2139,6 +2147,20 @@
                             }
                         }
                     }
+
+                    &.bg-icon{
+                        background-image: url('../../assets/images/icons/icon-play.png');
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: 52px 52px;
+                    }
+                }
+
+                video, iframe{
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.8;
+                    transition: all 0.5s ease-in-out;
                 }
 
                 &:hover{
@@ -2146,6 +2168,12 @@
                         opacity: 1;
                     }
                 }
+            }
+
+            .video-thunmbnail{
+                display: none;
+                visibility: hidden;
+                opacity: 0;
             }
         }
         

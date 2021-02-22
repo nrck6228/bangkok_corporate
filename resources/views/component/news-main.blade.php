@@ -47,7 +47,7 @@
                                         <div class="col-lg-6">
                                             <div class="card news-main matchHeight">
                                                 <a href="news-detail"  title="ไตเติ้ลข่าวแบบสั้น" class="bg-layer">
-                                                    <img src="../../assets/images/news/photo1.jpg" alt="" class="thumbnail">
+                                                    <img src="../../assets/images/main-slide/photo4.jpg" alt="" class="thumbnail">
                                                 </a>
                                                 <div class="source">
                                                     <span>PR Bangkok</span>

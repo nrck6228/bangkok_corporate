@@ -6,6 +6,7 @@
     <title>Title</title>
     <link rel="canonical" href=""/>
     <link rel="icon" href="{{ asset('assets/images/favicon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('js/modernizr.custom.js')}}">
     <link rel="stylesheet" href="{{ asset('css/content/coverpage.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
     <style type=text/css>
@@ -27,7 +28,7 @@
         </div>
 
         <!-- Photo -->
-        <div class="container-photo">
+        <!-- <div class="container-photo">
             <div class="wrapper md">
                 <div class="image-wrapper">
                     <img src="{{ asset('assets/images/coverpage/img-main-full.png')}}" alt="icon">               
@@ -63,13 +64,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Video -->
-        <!-- <div class="container-video">
-            <video autoplay muted loop id="myVideo">
-                <source src="assets/videos/rain.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
+        <div class="container-video">
+            <video loop="loop" autoplay="autoplay" muted="muted" playsinline="playsinline" preload="metadata" id="myVideo">
+                <source src="assets/videos/ocean.mp4" type="video/mp4">
+                <img src="{{ asset('assets/images/coverpage/img-main-full.png')}}" alt="An image of an explosion.">
             </video>
             <div class="btn-wrapper">
                 <div class="btn-enter reflect">
@@ -83,7 +84,7 @@
                     </a>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 </body>
 </html>

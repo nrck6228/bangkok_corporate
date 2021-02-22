@@ -15525,8 +15525,24 @@ a.ui-button:active,
               background-color: #006600; }
               .article-content .public-gallery .gallery-section .card .readmore-hover a:hover span {
                 color: white; }
+          .article-content .public-gallery .gallery-section .card .readmore-hover.bg-icon {
+            background-image: url("../../assets/images/icons/icon-play.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 52px 52px; }
+        .article-content .public-gallery .gallery-section .card video, .article-content .public-gallery .gallery-section .card iframe {
+          width: 100%;
+          height: 100%;
+          opacity: 0.8;
+          -webkit-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out; }
         .article-content .public-gallery .gallery-section .card:hover .bg-layer {
           opacity: 1; }
+      .article-content .public-gallery .gallery-section .video-thunmbnail {
+        display: none;
+        visibility: hidden;
+        opacity: 0; }
     .article-content .public-gallery .filter-sections .filter-item {
       opacity: 0;
       display: none;
