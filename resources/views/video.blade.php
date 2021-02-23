@@ -42,6 +42,20 @@
         <div class="homepage-section section--inside">
             @include('page/video.list')
         </div>
+
+        <!-- Hidden video div -->
+        <div style="display:none;" id="video1">
+            <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                <source src="assets/videos/istockphoto-1176148798-640_adpp_is.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div style="display:none;" id="video2">
+            <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                <source src="assets/videos/rain.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
     </div>
 </div>
 
@@ -86,6 +100,64 @@
 
     $(".nav-select_dropdown").change(function() {
         window.location = $(this).find("option:selected").val();
+    });
+</script>
+
+<link rel="stylesheet" href="{{ asset('gallery/lightgallery.css')}}">
+<script type="text/javascript" src="{{ asset('gallery/lightgallery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-thumbnail.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-zoom.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('gallery/lg-video.min.js') }}"></script>
+<style type="text/css">
+    #lg-zoom-in, #lg-zoom-out{
+        display: none;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let $document = $(this);
+
+        $document.on('onCloseAfter.lg', function(event) {
+            $document.data('lightGallery').destroy(true);
+        });
+
+        $('#dynamic1').on('click', function(e) {
+            $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [{ 
+                    html: '#video1',
+                    thumb: 'assets/videos/istockphoto-1176148798-640_adpp_is.mp4',
+                    subHtml: '<p>Coniston Calmness</p>'
+                },{
+                    src: 'https://www.youtube.com/watch?v=Agblfa8RjeY&amp;t=1s',
+                    thumb: 'https://www.youtube.com/watch?v=Agblfa8RjeY&amp;t=1s',
+                    subHtml: '<p>Beautiful morning</p>'
+                }],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+            });
+        });
+
+        $('#dynamic2').on('click', function(e) {
+            $(document).lightGallery({
+                dynamic: true,
+                dynamicEl: [{ 
+                    html: '#video2',
+                    thumb: 'assets/videos/rain.mp4',
+                    subHtml: '<p>Coniston Calmness</p>'
+                },{
+                    src: 'https://www.youtube.com/watch?v=Agblfa8RjeY&amp;t=1s',
+                    thumb: 'https://www.youtube.com/watch?v=Agblfa8RjeY&amp;t=1s',
+                    subHtml: '<p>Beautiful morning</p>'
+                }],
+                slideEndAnimatoin: false,
+                loop: false,
+                hideControlOnEnd: true,
+                download: false,
+            });
+        });
     });
 </script>
 @endsection

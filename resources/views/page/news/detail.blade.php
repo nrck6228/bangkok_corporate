@@ -126,7 +126,7 @@
                                                     </div>
                                                 </a> -->
                                                 <div class="col-lg-3 col-md-3" data-html="#video1" data-sub-html="video caption1">
-                                                    <img src="../../assets/images/news/photo3.jpg" alt="" class="video-thunmbnail">
+                                                    <img src="{{ asset('assets/videos/sample-mp4-file.mp4')}}" alt="" class="video-thunmbnail">
                                                     <div class="card matchHeight">
                                                         <div class="bg-layer">
                                                             <video class="lg-video-object lg-html5">

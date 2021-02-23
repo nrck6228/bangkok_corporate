@@ -47,7 +47,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="container-news">
-                    <div class="row" id="video-gallery">
+                    <!-- <div class="row" id="video-gallery">
                         <div class="col-lg-3 col-md-3" data-html="#video1" data-sub-html="video caption1">
                             <img src="../../assets/images/news/photo3.jpg" alt="" class="video-thunmbnail">
                             <div class="card news-main matchHeight">
@@ -88,6 +88,48 @@
                                 </div>
                             </div>
                         </a>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <a id="dynamic1" href="javascript:void(0)" class="cover" title="เชิญผู้เชี่ยวชาญร่วมเสนอแนะมาตรการป้องกันฝุ่นที่เหมาะสมกับบริบทของ กทม.">
+                                <div class="card matchHeight">
+                                    <div class="bg-layer">
+                                        <img src="../../assets/images/news/photo3.jpg" alt="" class="thumbnail">
+                                        <div class="readmore-hover bg-icon"></div>
+                                    </div>
+                                    <div class="source">
+                                        <span>25 พ.ย. 2563</span>
+                                    </div>
+                                    <div class="content-layer">
+                                        <div class="title">
+                                            <span>
+                                                กทม. ตรวจสอบสภาพรถยนต์ หน่วยงานในสังกัด ลดปัญหาฝุ่นลดมลพิษ PM2.5
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <a id="dynamic2" href="javascript:void(0)" class="cover" title="เชิญผู้เชี่ยวชาญร่วมเสนอแนะมาตรการป้องกันฝุ่นที่เหมาะสมกับบริบทของ กทม.">
+                                <div class="card matchHeight">
+                                    <div class="bg-layer">
+                                        <img src="../../assets/images/news/photo4.jpg" alt="" class="thumbnail">
+                                        <div class="readmore-hover bg-icon"></div>
+                                    </div>
+                                    <div class="source">
+                                        <span>25 พ.ย. 2563</span>
+                                    </div>
+                                    <div class="content-layer">
+                                        <div class="title">
+                                            <span>
+                                                กทม. ตรวจสอบสภาพรถยนต์ หน่วยงานในสังกัด ลดปัญหาฝุ่นลดมลพิษ PM2.5
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -106,13 +148,5 @@
             </div>
         </div>
     </div>
-</div>
-
-<!-- Hidden video div -->
-<div style="display:none;" id="video1">
-    <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls>
-        <source src="assets/videos/sample-mp4-file.mp4" type="video/mp4">
-         Your browser does not support HTML5 video.
-    </video>
 </div>
 
