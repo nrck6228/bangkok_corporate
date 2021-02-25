@@ -374,7 +374,7 @@
                                         <li class="d-flex justify-content-between align-items-center">
                                             <div class="input-custom">
                                                 <div class="custom-control custom-switch">
-                                                    <input type="radio" class="custom-control-input" id="customSwitch1" name="Ans_Vote">
+                                                    <input type="radio" class="custom-control-input" id="customSwitch1" name="Ans_Vote" checked disabled>
                                                     <label class="custom-control-label" for="customSwitch1">เห็นด้วยมาก</label>
                                                 </div>
                                             </div>
@@ -383,7 +383,7 @@
                                         <li class="d-flex justify-content-between align-items-center">
                                             <div class="input-custom">
                                                 <div class="custom-control custom-switch">
-                                                    <input type="radio" class="custom-control-input" id="customSwitch2" name="Ans_Vote">
+                                                    <input type="radio" class="custom-control-input" id="customSwitch2" name="Ans_Vote" disabled>
                                                     <label class="custom-control-label" for="customSwitch2">ปานกลาง</label>
                                                 </div>
                                             </div>
@@ -392,7 +392,7 @@
                                         <li class="d-flex justify-content-between align-items-center">
                                             <div class="input-custom">
                                                 <div class="custom-control custom-switch">
-                                                    <input type="radio" class="custom-control-input" id="customSwitch3" name="Ans_Vote">
+                                                    <input type="radio" class="custom-control-input" id="customSwitch3" name="Ans_Vote" disabled>
                                                     <label class="custom-control-label" for="customSwitch3">ไม่เห็นด้วย</label>
                                                 </div>
                                             </div>

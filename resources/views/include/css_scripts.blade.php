@@ -140,7 +140,7 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     const swiper = new Swiper('.swiper-container', {
-        speed: 500,
+        speed: 2000,
         loop: true,
         // autoplay: {
         //     delay: 5000,
@@ -148,17 +148,17 @@
         // },
         
         //Fade
-        // effect: 'fade',
-        // fadeEffect: {
-        //     crossFade: true
-        // },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
 
         //Flip
-        effect: 'flip',
-        grabCursor: true,
-        pagination: {
-            el: '.swiper-pagination',
-        },
+        // effect: 'flip',
+        // grabCursor: true,
+        // pagination: {
+        //     el: '.swiper-pagination',
+        // },
 
         // Cube
         // effect: 'cube',

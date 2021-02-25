@@ -175,6 +175,23 @@
             }
         }
     }
+
+    &.custom-switch {
+        .custom-control-input:disabled ~ .custom-control-label{
+            color: $color-def;
+            cursor: default;
+        }
+
+        .custom-control-input:disabled:checked ~ .custom-control-label::before{
+            border-color: $color-primary;
+            background-color: $color-primary;
+        }
+        .custom-control-input:disabled:checked ~ .custom-control-label{
+            color: $color-primary;
+            cursor: default;
+        }
+        
+    }
 }
 
 .filelabel {
@@ -273,73 +290,6 @@
         }
     }
 }
-
-// .input-style{
-//     position: relative;
-
-//     input[type="text"]{
-//         width: 100%;
-//         padding: 10px;
-//         color: #333;
-//         font-size: 1.8rem;
-//         line-height: 2rem;
-//         border: none;
-//         border-bottom: 1px solid transparent;
-//         outline: none;
-//         background: transparent;
-//         ~ label{
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             padding: 10px;
-//             color: $color-text;
-//             font-size: 1.8rem;
-//             line-height: 2rem;
-//             pointer-events: none;
-//             transition: all 0.5s ease;
-//         }
-
-//         &:focus ~ label{
-//             transition: all 0.5s ease;
-//             top: -18px;
-//             left: 0;
-//             color: $color-primary;
-//             font-size: 1.4rem;
-//         }
-
-//         &:valid ~ label{
-//             transition: all 0.5s ease;
-//             top: -18px;
-//             left: 0;
-//             color: $color-primary;
-//             font-size: 1.4rem;
-//         }
-//     }
-// }
-
-// .input-box{
-//     position: relative;
-//     margin-bottom: 30px;
-
-    
-//     input[type="password"]{
-//         margin-bottom: 5px;
-//     }
-//     label{
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         padding: 10px;
-//         color: #333;
-//         font-size: 1.8rem;
-//         pointer-events: none;
-//         transition: all 0.5s ease;
-        
-//     }
-//     &:first-of-type{
-//         margin-top: 20px;
-//     }
-// }
 
 .input-custom{
     .style-input{

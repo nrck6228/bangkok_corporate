@@ -45,13 +45,13 @@
 
         <!-- Hidden video div -->
         <div style="display:none;" id="video1">
-            <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="">
                 <source src="assets/videos/istockphoto-1176148798-640_adpp_is.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
         </div>
         <div style="display:none;" id="video2">
-            <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="">
                 <source src="assets/videos/rain.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>

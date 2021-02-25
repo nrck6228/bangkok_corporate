@@ -68,7 +68,7 @@
 
         <!-- Video -->
         <div class="container-video">
-            <video loop="loop" autoplay="autoplay" muted="muted" playsinline="playsinline" preload="metadata" id="myVideo">
+            <video loop autoplay muted playsinline preload="" id="myVideo">
                 <source src="assets/videos/ocean.mp4" type="video/mp4">
                 <img src="{{ asset('assets/images/coverpage/img-main-full.png')}}" alt="An image of an explosion.">
             </video>

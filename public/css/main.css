@@ -11894,6 +11894,18 @@ template {
     -ms-transform: translateX(1rem);
     transform: translateX(1rem); }
 
+.custom-control.custom-switch .custom-control-input:disabled ~ .custom-control-label {
+  color: #ccc;
+  cursor: default; }
+
+.custom-control.custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
+  border-color: #006600;
+  background-color: #006600; }
+
+.custom-control.custom-switch .custom-control-input:disabled:checked ~ .custom-control-label {
+  color: #006600;
+  cursor: default; }
+
 .filelabel {
   width: 100%;
   border: 2px dashed grey;
@@ -16021,6 +16033,7 @@ a.ui-button:active,
           margin: 0;
           padding: 0; }
         .comment-container .content.vote .list-choice-vote .total-vote {
+          margin-bottom: 20px;
           font-weight: 400;
           font-size: 1.6rem;
           line-height: 2rem; }
