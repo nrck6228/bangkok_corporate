@@ -34,7 +34,7 @@
             <source src="http://www.tonycuffe.com/mp3/tail%20toddle.mp3" />
             <source src="http://www.tonycuffe.com/mp3/girlwho.mp3" />    
         </audio>
-        <a href="https://www.google.co.th" title="กรุงเทพฯ ชีวิตดีๆ ที่ลงตัว" target="" class="caption-container">
+        <a href="https://www.google.co.th" title="กรุงเทพฯ ชีวิตดีๆ ที่ลงตัว" target="_blank" class="caption-container">
             <div class="caption-table">
                 <div class="caption-cell">
                     กรุงเทพฯ ชีวิตดีๆ ที่ลงตัว
@@ -44,7 +44,7 @@
     </div>
     <div class="swiper-slide">
         <img src="{{ asset('assets/images/main-slide/photo2.jpg')}}" alt="image">
-        <a href="http://www.bangkok.go.th/main/" title="กรุงเทพฯ ชีวิตดีๆ ที่ลงตัว" target="" class="caption-container">
+        <a href="http://www.bangkok.go.th/main/" title="กรุงเทพฯ ชีวิตดีๆ ที่ลงตัว" target="_blank" class="caption-container">
             <div class="caption-table">
                 <div class="caption-cell">
                     กรุงเทพฯ ชีวิตดีๆ ที่ลงตัว
@@ -54,7 +54,7 @@
     </div>
     <div class="swiper-slide">
         <img src="{{ asset('assets/images/main-slide/photo4.jpg')}}" alt="image">
-        <a href="http://www.bangkok.go.th/main/" title="กรุงเทพฯ ชีวิตดีๆ ที่ลงตัว" target="" class="caption-container">
+        <a href="http://www.bangkok.go.th/main/" title="กรุงเทพฯ ชีวิตดีๆ ที่ลงตัว" target="_blank" class="caption-container">
             <div class="caption-table">
                 <div class="caption-cell">
                     กรุงเทพฯ ชีวิตดีๆ ที่ลงตัว

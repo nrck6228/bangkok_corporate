@@ -363,6 +363,11 @@
                 .card{
                     .bg-layer{
                         height: 385px;
+                        object-fit: cover;
+
+                        img{
+                            height: 100%;
+                        }
                     }
 
                     @media only screen and (max-width: 1440px){
@@ -386,6 +391,13 @@
                     @media only screen and (max-width: 768px){
                         .bg-layer{
                             height: 385px;
+                        }
+                    }
+
+                    @media only screen and (max-width: 640px){
+                        .bg-layer{
+                            min-height: 190px;
+                            height: auto;
                         }
                     }
                 }
@@ -636,10 +648,6 @@
             }
 
             &.news-main{
-                .bg-layer {
-                    // height: 515px;
-                    // overflow: hidden;
-                }
                 .content-layer{
                     .caption{
                         position: relative;
@@ -657,18 +665,13 @@
             &.news-list{
                 margin-bottom: 25px;
 
-                .bg-layer {
-                    // height: 245px;
-                    // overflow: hidden;
-                }
-
                 .content-layer{
                     position: relative;
-                    bottom: 0;
-                    left: 0;
+                    bottom: auto;
+                    left: auto;
                     z-index: 19;
                     width: 100%;
-                    height: 270px;
+                    height: 240px;
                     padding: 20px;
                     background-color: white;
 
@@ -714,7 +717,12 @@
                 }
             }
 
-            @include media-breakpoint-down(lg){
+            @include media-breakpoint-down(sm){
+                .content-layer{
+                    position: relative;
+                    bottom: auto;
+                    left: auto;
+                }
             }
         }
 
@@ -2840,6 +2848,10 @@
         .card{
             border: none;
             background-color: transparent;
+
+            &.news-main{
+                background-color: white;
+            }
         }
 
         .btn{

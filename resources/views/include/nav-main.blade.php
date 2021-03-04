@@ -173,13 +173,13 @@
     <div class="nav-wrapper_i">
         <div class="menu-main d-none d-xl-block" id="menu-main">
             <ul class="menu-list" id="menu-list">
-                <li><a href="/" title="ชื่อเมนู" name="submenu" class="submenu">หน้าแรก</a>
+                <li><a href="/" title="ชื่อเมนู" class="submenu">หน้าแรก</a>
                 </li> 
-                <li><a href="about" title="ชื่อเมนู" name="submenu" class="submenu">เกี่ยวกับกรุงเทพมหานคร</a>
+                <li><a href="about" title="ชื่อเมนู" class="submenu">เกี่ยวกับกรุงเทพมหานคร</a>
                 </li> 
-                <li><a href="#" title="ชื่อเมนู" name="submenu" class="submenu">COVID-19</a>
+                <li><a href="#" title="ชื่อเมนู" class="submenu">COVID-19</a>
                 </li> 
-                <li><a href="news" title="ชื่อเมนู" name="submenu" class="submenu">ข่าวประชาสัมพันธ์</a>
+                <li><a href="news" title="ชื่อเมนู" class="submenu">ข่าวประชาสัมพันธ์</a>
                     <ul>
                         <li><a href="news" title="ชื่อเมนู" >ข่าวเด่น</a></li> 
                         <li><a href="news" title="ชื่อเมนู" >ข่าวผู้บริหาร</a></li> 
@@ -195,11 +195,11 @@
                         </li>
                     </ul>
                 </li> 
-                <li><a href="service" title="ชื่อเมนู" name="submenu" class="submenu">บริการกรุงเทพมหานคร</a>
+                <li><a href="service" title="ชื่อเมนู" class="submenu">บริการกรุงเทพมหานคร</a>
                 </li> 
-                <li><a href="highlight" title="ชื่อเมนู" name="submenu" class="submenu">Bangkok Highlight</a>
+                <li><a href="highlight" title="ชื่อเมนู" class="submenu">Bangkok Highlight</a>
                 </li> 
-                <li><a href="infographic" title="ชื่อเมนู" name="submenu" class="submenu">Infographic</a>
+                <li><a href="infographic" title="ชื่อเมนู" class="submenu">Infographic</a>
                 </li> 
             </ul>
         </div> 
@@ -236,13 +236,13 @@
             </div>
 
             <ul class="menu-list-touch">
-                <li><a href="/" title="ชื่อเมนู" name="submenu" class="submenu">หน้าแรก</a>
+                <li><a href="/" title="ชื่อเมนู" class="submenu">หน้าแรก</a>
                 </li> 
-                <li><a href="about" title="ชื่อเมนู" name="submenu" class="submenu">เกี่ยวกับกรุงเทพมหานคร</a>
+                <li><a href="about" title="ชื่อเมนู" class="submenu">เกี่ยวกับกรุงเทพมหานคร</a>
                 </li> 
-                <li><a href="#" title="ชื่อเมนู" name="submenu" class="submenu">COVID-19</a>
+                <li><a href="#" title="ชื่อเมนู" class="submenu">COVID-19</a>
                 </li> 
-                <li><a href="news" title="ชื่อเมนู" name="submenu" class="submenu">ข่าวประชาสัมพันธ์</a>
+                <li><a href="news" title="ชื่อเมนู" class="submenu">ข่าวประชาสัมพันธ์</a>
                     <ul>
                         <li><a href="news" title="ชื่อเมนู" >ข่าวเด่น</a></li> 
                         <li><a href="news" title="ชื่อเมนู" >ข่าวผู้บริหาร</a></li> 
@@ -258,11 +258,11 @@
                         </li>
                     </ul>
                 </li> 
-                <li><a href="service" title="ชื่อเมนู" name="submenu" class="submenu">บริการกรุงเทพมหานคร</a>
+                <li><a href="service" title="ชื่อเมนู" class="submenu">บริการกรุงเทพมหานคร</a>
                 </li> 
-                <li><a href="highlight" title="ชื่อเมนู" name="submenu" class="submenu">Bangkok Highlight</a>
+                <li><a href="highlight" title="ชื่อเมนู" class="submenu">Bangkok Highlight</a>
                 </li> 
-                <li><a href="infographic" title="ชื่อเมนู" name="submenu" class="submenu">Infographic</a>
+                <li><a href="infographic" title="ชื่อเมนู" class="submenu">Infographic</a>
                 </li> 
             </ul>
 

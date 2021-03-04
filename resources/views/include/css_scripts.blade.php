@@ -1,12 +1,12 @@
-<script type="text/javascript" rel="preload" src="{{ asset('js/init.js') }}"></script>
+<script rel="preload" src="{{ asset('js/init.js') }}"></script>
 
 <!-- AOS -->
 <link rel="stylesheet" href="{{ asset('animation/aos.css')}}">
-<script type="text/javascript" src="{{ asset('animation/aos.js') }}"></script>
+<script src="{{ asset('animation/aos.js') }}"></script>
 
 <!-- navgoco -->
 <link rel="stylesheet" href="{{ asset('css/jquery.navgoco.css')}}">
-<script type="text/javascript" src="{{ asset('js/jquery.navgoco.min.js') }}"></script>
+<script src="{{ asset('js/jquery.navgoco.min.js') }}"></script>
 
 <!-- DragDrop -->
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script> 
@@ -14,13 +14,13 @@
 <!-- Slick -->
 <link rel="stylesheet" href="{{ asset('css/slick.css')}}">
 <link rel="stylesheet" href="{{ asset('css/slick-theme.css')}}">
-<script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
+<script src="{{ asset('js/slick.min.js') }}"></script>
 
 <!-- Datepicker -->
-<!-- <script type="text/javascript" src="{{ asset('js/jqueryui_datepicker_thai.js') }}"></script> -->
+<!-- <script src="{{ asset('js/jqueryui_datepicker_thai.js') }}"></script> -->
 
 <!-- matchHeight -->
-<script type="text/javascript" src="{{ asset('js/jquery.matchHeight.js') }}"></script>
+<script src="{{ asset('js/jquery.matchHeight.js') }}"></script>
 
 <script>
     $(function() {
@@ -34,7 +34,7 @@
     });
 </script>
 
-<script type="text/javascript">
+<script>
     // Slider
     $(function (){
         var $slider = $('.slider');
@@ -85,7 +85,7 @@
     });
 </script>
 
-<script type="text/javascript">
+<script>
     $(function (){
     // banner link
         const check_list_1 = $('#slide_1').children().length;
@@ -111,7 +111,7 @@
     });
 </script>
 
-<script type="text/javascript">
+<script>
     $('.icon-like').on('click', function(event, count) {
         event.preventDefault();
         
@@ -207,7 +207,7 @@
         video.parentNode.replaceChild(img, video);
     }
 </script>
-<!-- <script type="text/javascript" src="{{ asset('js/canvas-video-player.js') }}"></script>
+<!-- <script src="{{ asset('js/canvas-video-player.js') }}"></script>
 <script>
     var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
     console.log(isIOS);

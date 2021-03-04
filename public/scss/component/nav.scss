@@ -62,8 +62,6 @@
 
         .social-list{
             display: block;
-            // padding: 0 0 12px 0;
-            // margin: 0 0 12px 0;
             padding: 12px 0;
             margin: 0 auto;
             border-top: 1px solid $color-def;
@@ -93,6 +91,10 @@
 
                     .fa-youtube{
                         color: #ED3024;
+                    }
+
+                    .fa-line{
+                        color: #3aae37;
                     }
                 }
             }
@@ -476,12 +478,8 @@
         background-color: white;
     }
 
-    @media only screen and (min-width: 1025px){
+    @media only screen and (min-width: 1113px){
         display: none;
-    }
-    
-    @media only screen and (max-width: 999px){
-        
     }
 }
 

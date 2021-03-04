@@ -339,7 +339,9 @@
         &.section--intro{
             .swiper-container{
                 position: relative;
-                height: 100vh;
+                width: 100%;
+                height: auto;
+                overflow: hidden;
 
                 // .video-responsive {
                 //     padding-bottom: 56.25%;
@@ -486,7 +488,12 @@
                     }
                 }
 
+                @media only screen and (min-width: 1367px){
+                    height: 100vh;
+                }
+
                 @media only screen and (max-width: 1366px) {
+                    height: 635px;
                     .swiper-button-prev {
                         right: 105px;
                     }

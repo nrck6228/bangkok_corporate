@@ -23,13 +23,13 @@
 <link rel="stylesheet" href="{{ asset('fontawesome/all.min.css')}}">
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
-<script type="text/javascript" rel="preload" src="{{ asset('js/jquery-1.12.3.js') }}"></script>
-<script type="text/javascript" rel="preload" src="{{ asset('js/popper.min.js') }}"></script>
-<script type="text/javascript" rel="preload" src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" rel="preload" src="{{ asset('js/jquery-ui-1.11.4.custom.js') }}"></script>
+<script rel="preload" src="{{ asset('js/jquery-1.12.3.js') }}"></script>
+<script rel="preload" src="{{ asset('js/popper.min.js') }}"></script>
+<script rel="preload" src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script rel="preload" src="{{ asset('js/jquery-ui-1.11.4.custom.js') }}"></script>
   
 <!-- Bootstrap Select -->
-<script type="text/javascript" src="{{ asset('js/bootstrap-select.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap-select.min.js') }}"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
 </head>
@@ -50,7 +50,7 @@
     
     @yield('contentpage')
     
-    <script type="text/javascript">
+    <script>
         $(document).ready(function() {
             $(window).load(function () {
                 $(".se-pre-con.loading").fadeOut(1000);

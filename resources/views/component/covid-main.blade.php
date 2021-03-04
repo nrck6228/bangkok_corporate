@@ -18,7 +18,7 @@
                         <a href="https://www.youtube.com/watch?v=Agblfa8RjeY&t=1s">
                             <div class="card">
                                 <div class="bg-layer">
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Agblfa8RjeY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube.com/embed/Agblfa8RjeY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <div class="readmore-hover"></div>
                                 </div>
                             </div>

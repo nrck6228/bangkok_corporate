@@ -16,18 +16,6 @@
                         <li class="nav-item">
                             <a id="tab-F" href="#pane-F" class="nav-link" data-toggle="tab" role="tab">ประกาศกรุงเทพฯ</a>
                         </li>
-                        <li class="nav-item">
-                            <a id="tab-C" href="#pane-C" class="nav-link active" data-toggle="tab" role="tab">ข่าวเด่น</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="tab-D" href="#pane-D" class="nav-link" data-toggle="tab" role="tab">ข่าวผู้บริหาร</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="tab-E" href="#pane-E" class="nav-link" data-toggle="tab" role="tab">ข่าวสอบแข่งขัน / สมัครงาน</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="tab-F" href="#pane-F" class="nav-link" data-toggle="tab" role="tab">ประกาศกรุงเทพฯ</a>
-                        </li>
                     </ul>
 
 
