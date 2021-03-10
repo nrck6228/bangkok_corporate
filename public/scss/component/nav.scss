@@ -520,8 +520,8 @@
                 position: relative;
                 // text-transform: uppercase;
                 color: $color-text;
-                height: 5rem;
-                line-height: 5rem;
+                min-height: 5rem;
+                line-height: 2.5rem;
                 letter-spacing: 0.1rem;
                 text-align: left;
                 -moz-transition: color .3s ease-out,opacity .3s ease-out 0s,visibility .3s ease-out 0s,letter-spacing .3s ease-out;
@@ -561,6 +561,11 @@
 
                 &.icon-line{
                     .st0{fill:#00B900;}
+                    .st1{fill:#FFFFFF;}
+                }
+
+                &.icon-twitter{
+                    .st0{fill:#00acee;}
                     .st1{fill:#FFFFFF;}
                 }
             }
@@ -868,12 +873,12 @@
     height: auto;
     text-align: center;
     line-height: 50px;
-    background-color: rgba(82, 82, 82, 0.5);
     z-index: 1004;
     
     .drawer{
         position: relative;
         .reduce{
+            background-color: rgba(82, 82, 82, 0.5);
             background-image: url('../../assets/images/icons/icon-reduce-sizefont.png');
             width: 45px;
             height: 45px;
@@ -890,6 +895,7 @@
             }
         }
         .normal{
+            background-color: rgba(82, 82, 82, 0.5);
             background-image: url('../../assets/images/icons/icon-normal-sizefont.png');
             width: 45px;
             height: 45px;
@@ -906,6 +912,7 @@
             }
         }
         .increase{
+            background-color: rgba(82, 82, 82, 0.5);
             background-image: url('../../assets/images/icons/icon-increase-sizefont.png');
             width: 45px;
             height: 45px;

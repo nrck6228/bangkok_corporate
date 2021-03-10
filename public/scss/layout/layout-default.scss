@@ -1779,6 +1779,7 @@
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     visibility: hidden;
+    display: none;
 
     .articles_i{
         width: 2px;
@@ -1801,11 +1802,11 @@
         transition-timing-function: ease-out;
     }
 
-    @media screen and (min-width: 1441px) {
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-        opacity: 1;
-        visibility: visible;
-    }
+    // @media screen and (min-width: 1441px) {
+    //     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    //     opacity: 1;
+    //     visibility: visible;
+    // }
 }
 
 .article-content{
@@ -2850,6 +2851,9 @@
             background-color: transparent;
 
             &.news-main{
+                background-color: white;
+            }
+            &.news-list{
                 background-color: white;
             }
         }

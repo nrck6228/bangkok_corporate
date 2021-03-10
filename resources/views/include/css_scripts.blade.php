@@ -148,10 +148,10 @@
         // },
         
         //Fade
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
+        // effect: 'fade',
+        // fadeEffect: {
+        //     crossFade: true
+        // },
 
         //Flip
         // effect: 'flip',
@@ -182,7 +182,7 @@
 
         on: {
             slideChange: function () {
-            console.log('Hello World') 
+                console.log('Hello World');
             },
         }
 

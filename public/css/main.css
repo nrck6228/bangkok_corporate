@@ -12561,8 +12561,8 @@ a.ui-button:active,
         font-size: 1.4rem;
         position: relative;
         color: #525252;
-        height: 5rem;
-        line-height: 5rem;
+        min-height: 5rem;
+        line-height: 2.5rem;
         letter-spacing: 0.1rem;
         text-align: left;
         -moz-transition: color .3s ease-out,opacity .3s ease-out 0s,visibility .3s ease-out 0s,letter-spacing .3s ease-out;
@@ -12612,6 +12612,10 @@ a.ui-button:active,
         .menu .menu-list li a.icon-line .st0 {
           fill: #00B900; }
         .menu .menu-list li a.icon-line .st1 {
+          fill: #FFFFFF; }
+        .menu .menu-list li a.icon-twitter .st0 {
+          fill: #00acee; }
+        .menu .menu-list li a.icon-twitter .st1 {
           fill: #FFFFFF; }
 
 .nav-wrapper {
@@ -12845,11 +12849,11 @@ a.ui-button:active,
   height: auto;
   text-align: center;
   line-height: 50px;
-  background-color: rgba(82, 82, 82, 0.5);
   z-index: 1004; }
   .control-container_fontsize .drawer {
     position: relative; }
     .control-container_fontsize .drawer .reduce {
+      background-color: rgba(82, 82, 82, 0.5);
       background-image: url("../../assets/images/icons/icon-reduce-sizefont.png");
       width: 45px;
       height: 45px;
@@ -12865,6 +12869,7 @@ a.ui-button:active,
       .control-container_fontsize .drawer .reduce.active {
         background-position: 0 0; }
     .control-container_fontsize .drawer .normal {
+      background-color: rgba(82, 82, 82, 0.5);
       background-image: url("../../assets/images/icons/icon-normal-sizefont.png");
       width: 45px;
       height: 45px;
@@ -12880,6 +12885,7 @@ a.ui-button:active,
       .control-container_fontsize .drawer .normal.active {
         background-position: 0 0; }
     .control-container_fontsize .drawer .increase {
+      background-color: rgba(82, 82, 82, 0.5);
       background-image: url("../../assets/images/icons/icon-increase-sizefont.png");
       width: 45px;
       height: 45px;
@@ -15244,7 +15250,8 @@ a.ui-button:active,
   transition-timing-function: ease;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  display: none; }
   .articles-wrap .articles_i {
     width: 2px;
     top: 0;
@@ -15264,11 +15271,6 @@ a.ui-button:active,
     -o-transition-timing-function: ease-out;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out; }
-  @media screen and (min-width: 1441px) {
-    .articles-wrap {
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-      opacity: 1;
-      visibility: visible; } }
 
 .article-content {
   position: relative; }
@@ -16159,6 +16161,8 @@ a.ui-button:active,
       border: none;
       background-color: transparent; }
       .tabs-wrapper .tab-content .card.news-main {
+        background-color: white; }
+      .tabs-wrapper .tab-content .card.news-list {
         background-color: white; }
     .tabs-wrapper .tab-content .btn {
       margin: 0 15px 0 0; }
@@ -18015,6 +18019,51 @@ Due to the split circle of progress-left and progress right, we must use the ani
         .page .homepage-section.section--intro .swiper-container .caption-cell .title {
           font-size: 3rem;
           line-height: 3.4rem; } }
+
+.disintegration-container {
+  position: absolute;
+  pointer-events: none; }
+  .disintegration-container > canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
+    transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
+    -o-transition: transform 1s ease-out, opacity 1s ease-out;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    transition: transform 1s ease-out, opacity 1s ease-out, -webkit-transform 1s ease-out;
+    opacity: 1;
+    -webkit-transform: rotate(0deg) translate(0px, 0px) rotate(0deg);
+    -ms-transform: rotate(0deg) translate(0px, 0px) rotate(0deg);
+    transform: rotate(0deg) translate(0px, 0px) rotate(0deg); }
+
+@-webkit-keyframes debug-pulse {
+  0% {
+    -webkit-filter: none;
+    filter: none; }
+  95% {
+    -webkit-filter: none;
+    filter: none; }
+  95% {
+    -webkit-filter: drop-shadow(0 1px 0 red);
+    filter: drop-shadow(0 1px 0 red); }
+  100% {
+    -webkit-filter: drop-shadow(0 1px 0 red);
+    filter: drop-shadow(0 1px 0 red); } }
+
+@keyframes debug-pulse {
+  0% {
+    -webkit-filter: none;
+    filter: none; }
+  95% {
+    -webkit-filter: none;
+    filter: none; }
+  95% {
+    -webkit-filter: drop-shadow(0 1px 0 red);
+    filter: drop-shadow(0 1px 0 red); }
+  100% {
+    -webkit-filter: drop-shadow(0 1px 0 red);
+    filter: drop-shadow(0 1px 0 red); } }
 
 .scroll-down {
   position: absolute;

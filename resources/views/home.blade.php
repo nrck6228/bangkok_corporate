@@ -11,7 +11,7 @@
     
     <div id="main-content" class="page type-homepage">
         <div class="homepage-section section--intro">
-            @include('component.banner-swiper')
+            @include('component.banner-snap')
         </div>
         <div class="homepage-section section--inside">
             @include('component.covid-main')
