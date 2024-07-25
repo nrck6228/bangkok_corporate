@@ -1,0 +1,1120 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>CHANGELOG.md</title>
+      </head>
+      <body>
+        <h1 id="ramsey-uuid-changelog">ramsey/uuid Changelog</h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>
+and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h2 id="unreleased"><a href="https://github.com/ramsey/uuid/compare/4.1.1...HEAD">Unreleased</a></h2>
+<h3 id="added">Added</h3>
+<h3 id="changed">Changed</h3>
+<h3 id="deprecated">Deprecated</h3>
+<h3 id="removed">Removed</h3>
+<h3 id="fixed">Fixed</h3>
+<h3 id="security">Security</h3>
+<h2 id="4-1-1-2020-08-18"><a href="https://github.com/ramsey/uuid/compare/4.1.0...4.1.1">4.1.1</a> - 2020-08-18</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Allow use of brick/math version 0.9</li>
+</ul>
+<h2 id="4-1-0-2020-07-28"><a href="https://github.com/ramsey/uuid/compare/4.0.1...4.1.0">4.1.0</a> - 2020-07-28</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Improve performance of <code>Uuid::fromString()</code>, <code>Uuid::fromBytes()</code>,
+<code>UuidInterface#toString()</code>, and <code>UuidInterface#getBytes()</code>. See PR
+<a href="https://github.com/ramsey/uuid/pull/324">#324</a> for more information.</li>
+</ul>
+<h2 id="4-0-1-2020-03-29"><a href="https://github.com/ramsey/uuid/compare/4.0.0...4.0.1">4.0.1</a> - 2020-03-29</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix collection deserialization errors due to upstream <code>allowed_classes</code> being
+set to <code>false</code>. For details, see <a href="https://github.com/ramsey/uuid/issues/303">ramsey/uuid#303</a>
+and <a href="https://github.com/ramsey/collection/issues/47">ramsey/collection#47</a>.</li>
+</ul>
+<h2 id="4-0-0-2020-03-22"><a href="https://github.com/ramsey/uuid/compare/4.0.0-beta2...4.0.0">4.0.0</a> - 2020-03-22</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add support for version 6 UUIDs, as defined by <a href="http://gh.peabody.io/uuidv6/">http://gh.peabody.io/uuidv6/</a>,
+including the static method <code>Uuid::uuid6()</code>, which returns a
+<code>Nonstandard\UuidV6</code> instance.</li>
+<li>Add ability to generate version 2 (DCE Security) UUIDs, including the static
+method <code>Uuid::uuid2()</code>, which returns an <code>Rfc4122\UuidV2</code> instance.</li>
+<li>Add classes to represent each version of RFC 4122 UUID. When generating new
+UUIDs or creating UUIDs from existing strings, bytes, or integers, if the UUID
+is an RFC 4122 variant, one of these instances will be returned:<ul>
+<li><code>Rfc4122\UuidV1</code></li>
+<li><code>Rfc4122\UuidV2</code></li>
+<li><code>Rfc4122\UuidV3</code></li>
+<li><code>Rfc4122\UuidV4</code></li>
+<li><code>Rfc4122\UuidV5</code></li>
+<li><code>Rfc4122\NilUuid</code></li>
+</ul>
+</li>
+<li>Add classes to represent version 6 UUIDs, GUIDs, and nonstandard
+(non-RFC 4122 variant) UUIDs:<ul>
+<li><code>Nonstandard\UuidV6</code></li>
+<li><code>Guid\Guid</code></li>
+<li><code>Nonstandard\Uuid</code></li>
+</ul>
+</li>
+<li>Add <code>Uuid::fromDateTime()</code> to create version 1 UUIDs from instances of
+<code>\DateTimeInterface</code>.</li>
+<li>The <code>\DateTimeInterface</code> instance returned by <code>UuidInterface::getDateTime()</code>
+(and now <code>Rfc4122\UuidV1::getDateTime()</code>) now includes microseconds, as
+specified by the version 1 UUID.</li>
+<li>Add <code>Validator\ValidatorInterface</code> and <code>Validator\GenericValidator</code> to allow
+flexibility in validating UUIDs/GUIDs.<ul>
+<li>The default validator continues to validate UUID strings using the same
+relaxed validation pattern found in the 3.x series of ramsey/uuid.</li>
+<li>Introduce <code>Rfc4122\Validator</code> that may be used for strict validation of
+RFC 4122 UUID strings.</li>
+<li>Add ability to change the default validator used by <code>Uuid</code> through
+<code>FeatureSet::setValidator()</code>.</li>
+<li>Add <code>getValidator()</code> and <code>setValidator()</code> to <code>UuidFactory</code>.</li>
+</ul>
+</li>
+<li>Add <code>Provider\Node\StaticNodeProvider</code> to assist in setting a custom static
+node value with the multicast bit set for version 1 UUIDs.</li>
+<li>Add the following new exceptions:<ul>
+<li><code>Exception\BuilderNotFoundException</code> -
+Thrown to indicate that no suitable UUID builder could be found.</li>
+<li><code>Exception\DateTimeException</code> -
+Thrown to indicate that the PHP DateTime extension encountered an
+exception/error.</li>
+<li><code>Exception\DceSecurityException</code> -
+Thrown to indicate an exception occurred while dealing with DCE Security
+(version 2) UUIDs.</li>
+<li><code>Exception\InvalidArgumentException</code> -
+Thrown to indicate that the argument received is not valid. This extends the
+built-in PHP <code>\InvalidArgumentException</code>, so there should be no BC breaks
+with ramsey/uuid throwing this exception, if you are catching the PHP
+exception.</li>
+<li><code>Exception\InvalidBytesException</code> -
+Thrown to indicate that the bytes being operated on are invalid in some way.</li>
+<li><code>Exception\NameException</code> -
+Thrown to indicate that an error occurred while attempting to hash a
+namespace and name.</li>
+<li><code>Exception\NodeException</code> -
+Throw to indicate that attempting to fetch or create a node ID encountered
+an error.</li>
+<li><code>Exception\RandomSourceException</code> -
+Thrown to indicate that the source of random data encountered an error.</li>
+<li><code>Exception\TimeSourceException</code> -
+Thrown to indicate that the source of time encountered an error.</li>
+<li><code>Exception\UnableToBuildUuidException</code> -
+Thrown to indicate a builder is unable to build a UUID.</li>
+</ul>
+</li>
+<li>Introduce a <code>Builder\FallbackBuilder</code>, used by <code>FeatureSet</code> to help decide
+whether to return a <code>Uuid</code> or <code>Nonstandard\Uuid</code> when decoding a
+UUID string or bytes.</li>
+<li>Add <code>Rfc4122\UuidInterface</code> to specifically represent RFC 4122 variant UUIDs.</li>
+<li>Add <code>Rfc4122\UuidBuilder</code> to build RFC 4122 variant UUIDs. This replaces the
+existing <code>Builder\DefaultUuidBuilder</code>, which is now deprecated.</li>
+<li>Introduce <code>Math\CalculatorInterface</code> for representing calculators to perform
+arithmetic operations on integers.</li>
+<li>Depend on <a href="https://github.com/brick/math">brick/math</a> for the
+<code>Math\BrickMathCalculator</code>, which is the default calculator used by this
+library when math cannot be performed in native PHP due to integer size
+limitations. The calculator is configurable and may be changed, if desired.</li>
+<li>Add <code>Converter\Number\GenericNumberConverter</code> and
+<code>Converter\Time\GenericTimeConverter</code> which will use the calculator provided
+to convert numbers and time to values for UUIDs.</li>
+<li>Introduce <code>Type\Hexadecimal</code>, <code>Type\Integer</code>, <code>Type\Decimal</code>, and <code>Type\Time</code>
+for improved type-safety when dealing with arbitrary string values.</li>
+<li>Add a <code>Type\TypeInterface</code> that each of the ramsey/uuid types implements.</li>
+<li>Add <code>Fields\FieldsInterface</code> and <code>Rfc4122\FieldsInterface</code> to define
+field layouts for UUID variants. The implementations <code>Rfc4122\Fields</code>,
+<code>Guid\Fields</code>, and <code>Nonstandard\Fields</code> store the 16-byte,
+binary string representation of the UUID internally, and these manage
+conversion of the binary string into the hexadecimal field values.</li>
+<li>Introduce <code>Builder\BuilderCollection</code> and <code>Provider\Node\NodeProviderCollection</code>.
+These are typed collections for providing builders and node providers to
+<code>Builder\FallbackBuilder</code> and <code>Provider\Node\FallbackNodeProvider</code>, respectively.</li>
+<li>Add <code>Generator\NameGeneratorInterface</code> to support alternate methods of
+generating bytes for version 3 and version 5 name-based UUID. By default,
+ramsey/uuid uses the <code>Generator\DefaultNameGenerator</code>, which uses the standard
+algorithm this library has used since the beginning. You may choose to use the
+new <code>Generator\PeclUuidNameGenerator</code> to make use of the new
+<code>uuid_generate_md5()</code> and <code>uuid_generate_sha1()</code> functions in
+<a href="https://pecl.php.net/package/uuid">ext-uuid version 1.1.0</a>.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Set minimum required PHP version to 7.2.</li>
+<li>This library now works on 32-bit and 64-bit systems, with no degradation in
+functionality.</li>
+<li>By default, the following static methods will now return specific instance
+types. This should not cause any BC breaks if typehints target <code>UuidInterface</code>:<ul>
+<li><code>Uuid::uuid1</code> returns <code>Rfc4122\UuidV1</code></li>
+<li><code>Uuid::uuid3</code> returns <code>Rfc4122\UuidV3</code></li>
+<li><code>Uuid::uuid4</code> returns <code>Rfc4122\UuidV4</code></li>
+<li><code>Uuid::uuid5</code> returns <code>Rfc4122\UuidV5</code></li>
+</ul>
+</li>
+<li>Accept <code>Type\Hexadecimal</code> for the <code>$node</code> parameter for
+<code>UuidFactoryInterface::uuid1()</code>. This is in addition to the <code>int|string</code> types
+already accepted, so there are no BC breaks. <code>Type\Hexadecimal</code> is now the
+recommended type to pass for <code>$node</code>.</li>
+<li>Out of the box, <code>Uuid::fromString()</code>, <code>Uuid::fromBytes()</code>, and
+<code>Uuid::fromInteger()</code> will now return either an <code>Rfc4122\UuidInterface</code>
+instance or an instance of <code>Nonstandard\Uuid</code>, depending on whether the input
+contains an RFC 4122 variant UUID with a valid version identifier. Both
+implement <code>UuidInterface</code>, so BC breaks should not occur if typehints use the
+interface.</li>
+<li>Change <code>Uuid::getFields()</code> to return an instance of <code>Fields\FieldsInterface</code>.
+Previously, it returned an array of integer values (on 64-bit systems only).</li>
+<li><code>Uuid::getDateTime()</code> now returns an instance of <code>\DateTimeImmutable</code> instead
+of <code>\DateTime</code>.</li>
+<li>Make the following changes to <code>UuidInterface</code>:<ul>
+<li><code>getHex()</code> now returns a <code>Type\Hexadecimal</code> instance.</li>
+<li><code>getInteger()</code> now returns a <code>Type\Integer</code> instance. The <code>Type\Integer</code>
+instance holds a string representation of a 128-bit integer. You may then
+use a math library of your choice (bcmath, gmp, etc.) to operate on the
+string integer.</li>
+<li><code>getDateTime()</code> now returns <code>\DateTimeInterface</code> instead of <code>\DateTime</code>.</li>
+<li>Add <code>__toString()</code> method.</li>
+<li>Add <code>getFields()</code> method. It returns an instance of <code>Fields\FieldsInterface</code>.</li>
+</ul>
+</li>
+<li>Add the following new methods to <code>UuidFactoryInterface</code>:<ul>
+<li><code>uuid2()</code></li>
+<li><code>uuid6()</code></li>
+<li><code>fromDateTime()</code></li>
+<li><code>fromInteger()</code></li>
+<li><code>getValidator()</code></li>
+</ul>
+</li>
+<li>This library no longer throws generic exceptions. However, this should not
+result in BC breaks, since the new exceptions extend from built-in PHP
+exceptions that this library previously threw.<ul>
+<li><code>Exception\UnsupportedOperationException</code> is now descended from
+<code>\LogicException</code>. Previously, it descended from <code>\RuntimeException</code>.</li>
+</ul>
+</li>
+<li>Change required constructor parameters for <code>Uuid</code>:<ul>
+<li>Change the first required constructor parameter for <code>Uuid</code> from
+<code>array $fields</code> to <code>Rfc4122\FieldsInterface $fields</code>.</li>
+<li>Add <code>Converter\TimeConverterInterface $timeConverter</code> as the fourth
+required constructor parameter for <code>Uuid</code>.</li>
+</ul>
+</li>
+<li>Change the second required parameter of <code>Builder\UuidBuilderInterface::build()</code>
+from <code>array $fields</code> to <code>string $bytes</code>. Rather than accepting an array of
+hexadecimal strings as UUID fields, the <code>build()</code> method now expects a byte
+string.</li>
+<li>Add <code>Converter\TimeConverterInterface $timeConverter</code> as the second required
+constructor parameter for <code>Rfc4122\UuidBuilder</code>. This also affects the
+now-deprecated <code>Builder\DefaultUuidBuilder</code>, since this class now inherits
+from <code>Rfc4122\UuidBuilder</code>.</li>
+<li>Add <code>convertTime()</code> method to <code>Converter\TimeConverterInterface</code>.</li>
+<li>Add <code>getTime()</code> method to <code>Provider\TimeProviderInterface</code>. It replaces the
+<code>currentTime()</code> method.</li>
+<li><code>Provider\Node\FallbackNodeProvider</code> now accepts only a
+<code>Provider\Node\NodeProviderCollection</code> as its constructor parameter.</li>
+<li><code>Provider\Time\FixedTimeProvider</code> no longer accepts an array but accepts only
+<code>Type\Time</code> instances.</li>
+<li><code>Provider\NodeProviderInterface::getNode()</code> now returns <code>Type\Hexadecimal</code>
+instead of <code>string|false|null</code>.</li>
+<li><code>Converter/TimeConverterInterface::calculateTime()</code> now returns
+<code>Type\Hexadecimal</code> instead of <code>array</code>. The value is the full UUID timestamp
+value (count of 100-nanosecond intervals since the Gregorian calendar epoch)
+in hexadecimal format.</li>
+<li>Change methods in <code>NumberConverterInterface</code> to accept and return string values
+instead of <code>mixed</code>; this simplifies the interface and makes it consistent.</li>
+<li><code>Generator\DefaultTimeGenerator</code> no longer adds the variant and version bits
+to the bytes it returns. These must be applied to the bytes afterwards.</li>
+<li>When encoding to bytes or decoding from bytes, <code>OrderedTimeCodec</code> now checks
+whether the UUID is an RFC 4122 variant, version 1 UUID. If not, it will throw
+an exception—<code>InvalidArgumentException</code> when using
+<code>OrderedTimeCodec::encodeBinary()</code> and <code>UnsupportedOperationException</code> when
+using <code>OrderedTimeCodec::decodeBytes()</code>.</li>
+</ul>
+<h3 id="deprecated">Deprecated</h3>
+<p>The following functionality is deprecated and will be removed in ramsey/uuid
+5.0.0.</p>
+<ul>
+<li>The following methods from <code>UuidInterface</code> and <code>Uuid</code> are deprecated. Use their
+counterparts on the <code>Rfc4122\FieldsInterface</code> returned by <code>Uuid::getFields()</code>.<ul>
+<li><code>getClockSeqHiAndReservedHex()</code></li>
+<li><code>getClockSeqLowHex()</code></li>
+<li><code>getClockSequenceHex()</code></li>
+<li><code>getFieldsHex()</code></li>
+<li><code>getNodeHex()</code></li>
+<li><code>getTimeHiAndVersionHex()</code></li>
+<li><code>getTimeLowHex()</code></li>
+<li><code>getTimeMidHex()</code></li>
+<li><code>getTimestampHex()</code></li>
+<li><code>getVariant()</code></li>
+<li><code>getVersion()</code></li>
+</ul>
+</li>
+<li>The following methods from <code>Uuid</code> are deprecated. Use the <code>Rfc4122\FieldsInterface</code>
+instance returned by <code>Uuid::getFields()</code> to get the <code>Type\Hexadecimal</code> value
+for these fields. You may use the new <code>Math\CalculatorInterface::toIntegerValue()</code>
+method to convert the <code>Type\Hexadecimal</code> instances to instances of
+<code>Type\Integer</code>. This library provides <code>Math\BrickMathCalculator</code>, which may be
+used for this purpose, or you may use the arbitrary-precision arithemetic
+library of your choice.<ul>
+<li><code>getClockSeqHiAndReserved()</code></li>
+<li><code>getClockSeqLow()</code></li>
+<li><code>getClockSequence()</code></li>
+<li><code>getNode()</code></li>
+<li><code>getTimeHiAndVersion()</code></li>
+<li><code>getTimeLow()</code></li>
+<li><code>getTimeMid()</code></li>
+<li><code>getTimestamp()</code></li>
+</ul>
+</li>
+<li><code>getDateTime()</code> on <code>UuidInterface</code> and <code>Uuid</code> is deprecated. Use this method
+only on instances of <code>Rfc4122\UuidV1</code> or <code>Nonstandard\UuidV6</code>.</li>
+<li><code>getUrn()</code> on <code>UuidInterface</code> and <code>Uuid</code> is deprecated. It is available on
+<code>Rfc4122\UuidInterface</code> and classes that implement it.</li>
+<li>The following methods are deprecated and have no direct replacements. However,
+you may obtain the same information by calling <code>UuidInterface::getHex()</code> and
+splitting the return value in half.<ul>
+<li><code>UuidInterface::getLeastSignificantBitsHex()</code></li>
+<li><code>UuidInterface::getMostSignificantBitsHex()</code></li>
+<li><code>Uuid::getLeastSignificantBitsHex()</code></li>
+<li><code>Uuid::getMostSignificantBitsHex()</code></li>
+<li><code>Uuid::getLeastSignificantBits()</code></li>
+<li><code>Uuid::getMostSignificantBits()</code></li>
+</ul>
+</li>
+<li><code>UuidInterface::getNumberConverter()</code> and <code>Uuid::getNumberConverter()</code> are
+deprecated. There is no alternative recommendation, so plan accordingly.</li>
+<li><code>Builder\DefaultUuidBuilder</code> is deprecated; transition to <code>Rfc4122\UuidBuilder</code>.</li>
+<li><code>Converter\Number\BigNumberConverter</code> is deprecated; transition to
+<code>Converter\Number\GenericNumberConverter</code>.</li>
+<li><code>Converter\Time\BigNumberTimeConverter</code> is deprecated; transition to
+<code>Converter\Time\GenericTimeConverter</code>.</li>
+<li>The classes for representing and generating <em>degraded</em> UUIDs are deprecated.
+These are no longer necessary; this library now behaves the same on 32-bit and
+64-bit systems.<ul>
+<li><code>Builder\DegradedUuidBuilder</code></li>
+<li><code>Converter\Number\DegradedNumberConverter</code></li>
+<li><code>Converter\Time\DegradedTimeConverter</code></li>
+<li><code>DegradedUuid</code></li>
+</ul>
+</li>
+<li>The <code>Uuid::UUID_TYPE_IDENTIFIER</code> constant is deprecated. Use
+<code>Uuid::UUID_TYPE_DCE_SECURITY</code> instead.</li>
+<li>The <code>Uuid::VALID_PATTERN</code> constant is deprecated. Use
+<code>Validator\GenericValidator::getPattern()</code> or <code>Rfc4122\Validator::getPattern()</code>
+instead.</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Remove the following bytes generators and recommend
+<code>Generator\RandomBytesGenerator</code> as a suitable replacement:<ul>
+<li><code>Generator\MtRandGenerator</code></li>
+<li><code>Generator\OpenSslGenerator</code></li>
+<li><code>Generator\SodiumRandomGenerator</code></li>
+</ul>
+</li>
+<li>Remove <code>Exception\UnsatisfiedDependencyException</code>. This library no longer
+throws this exception.</li>
+<li>Remove the method <code>Provider\TimeProviderInterface::currentTime()</code>. Use
+<code>Provider\TimeProviderInterface::getTime()</code> instead.</li>
+</ul>
+<h2 id="4-0-0-beta2-2020-03-01"><a href="https://github.com/ramsey/uuid/compare/4.0.0-beta1...4.0.0-beta2">4.0.0-beta2</a> - 2020-03-01</h2>
+<h2 id="added">Added</h2>
+<ul>
+<li>Add missing convenience methods for <code>Rfc4122\UuidV2</code>.</li>
+<li>Add <code>Provider\Node\StaticNodeProvider</code> to assist in setting a custom static
+node value with the multicast bit set for version 1 UUIDs.</li>
+</ul>
+<h2 id="changed">Changed</h2>
+<ul>
+<li><code>Provider\NodeProviderInterface::getNode()</code> now returns <code>Type\Hexadecimal</code>
+instead of <code>string|false|null</code>.</li>
+</ul>
+<h2 id="4-0-0-beta1-2020-02-27"><a href="https://github.com/ramsey/uuid/compare/4.0.0-alpha5...4.0.0-beta1">4.0.0-beta1</a> - 2020-02-27</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add <code>ValidatorInterface::getPattern()</code> to return the regular expression
+pattern used by the validator.</li>
+<li>Add <code>v6()</code> helper function for version 6 UUIDs.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Set the pattern constants on validators as <code>private</code>. Use the <code>getPattern()</code>
+method instead.</li>
+<li>Change the <code>$node</code> parameter for <code>UuidFactoryInterface::uuid6()</code> to accept
+<code>null</code> or <code>Type\Hexadecimal</code>.</li>
+<li>Accept <code>Type\Hexadecimal</code> for the <code>$node</code> parameter for
+<code>UuidFactoryInterface::uuid1()</code>. This is in addition to the <code>int|string</code> types
+already accepted, so there are no BC breaks. <code>Type\Hexadecimal</code> is now the
+recommended type to pass for <code>$node</code>.</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Remove <code>currentTime()</code> method from <code>Provider\Time\FixedTimeProvider</code> and
+<code>Provider\Time\SystemTimeProvider</code>; it had previously been removed from
+<code>Provider\TimeProviderInterface</code>.</li>
+</ul>
+<h2 id="4-0-0-alpha5-2020-02-23"><a href="https://github.com/ramsey/uuid/compare/4.0.0-alpha4...4.0.0-alpha5">4.0.0-alpha5</a> - 2020-02-23</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Introduce <code>Builder\BuilderCollection</code> and <code>Provider\Node\NodeProviderCollection</code>.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><code>Builder\FallbackBuilder</code> now accepts only a <code>Builder\BuilderCollection</code> as
+its constructor parameter.</li>
+<li><code>Provider\Node\FallbackNodeProvider</code> now accepts only a <code>Provider\Node\NodeProviderCollection</code>
+as its constructor parameter.</li>
+<li><code>Provider\Time\FixedTimeProvider</code> no longer accepts an array but accepts only
+<code>Type\Time</code> instances.</li>
+</ul>
+<h2 id="4-0-0-alpha4-2020-02-23"><a href="https://github.com/ramsey/uuid/compare/4.0.0-alpha3...4.0.0-alpha4">4.0.0-alpha4</a> - 2020-02-23</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add a <code>Type\TypeInterface</code> that each of the ramsey/uuid types implements.</li>
+<li>Support version 6 UUIDs; see <a href="http://gh.peabody.io/uuidv6/">http://gh.peabody.io/uuidv6/</a>.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Rename <code>Type\IntegerValue</code> to <code>Type\Integer</code>. It was originally named
+<code>IntegerValue</code> because static analysis sees <code>Integer</code> in docblock annotations
+and treats it as the native <code>int</code> type. <code>Integer</code> is not a reserved word in
+PHP, so it should be named <code>Integer</code> for consistency with other types in this
+library. When using it, a class alias prevents static analysis from
+complaining.</li>
+<li>Mark <code>Guid\Guid</code> and <code>Nonstandard\Uuid</code> classes as <code>final</code>.</li>
+<li>Add <code>uuid6()</code> method to <code>UuidFactoryInterface</code>.</li>
+</ul>
+<h3 id="deprecated">Deprecated</h3>
+<ul>
+<li><code>Uuid::UUID_TYPE_IDENTIFIER</code> is deprecated. Use <code>Uuid::UUID_TYPE_DCE_SECURITY</code>
+instead.</li>
+<li><code>Uuid::VALID_PATTERN</code> is deprecated. Use <code>Validator\GenericValidator::VALID_PATTERN</code>
+instead.</li>
+</ul>
+<h2 id="4-0-0-alpha3-2020-02-21"><a href="https://github.com/ramsey/uuid/compare/4.0.0-alpha2...4.0.0-alpha3">4.0.0-alpha3</a> - 2020-02-21</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix microsecond rounding error on 32-bit systems.</li>
+</ul>
+<h2 id="4-0-0-alpha2-2020-02-21"><a href="https://github.com/ramsey/uuid/compare/4.0.0-alpha1...4.0.0-alpha2">4.0.0-alpha2</a> - 2020-02-21</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add <code>Uuid::fromDateTime()</code> to create version 1 UUIDs from instances of
+<code>\DateTimeInterface</code>.</li>
+<li>Add <code>Generator\NameGeneratorInterface</code> to support alternate methods of
+generating bytes for version 3 and version 5 name-based UUID. By default,
+ramsey/uuid uses the <code>Generator\DefaultNameGenerator</code>, which uses the standard
+algorithm this library has used since the beginning. You may choose to use the
+new <code>Generator\PeclUuidNameGenerator</code> to make use of the new
+<code>uuid_generate_md5()</code> and <code>uuid_generate_sha1()</code> functions in ext-uuid version
+1.1.0.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Add <code>fromDateTime()</code> method to <code>UuidFactoryInterface</code>.</li>
+<li>Change <code>UuidInterface::getHex()</code> to return a <code>Ramsey\Uuid\Type\Hexadecimal</code> instance.</li>
+<li>Change <code>UuidInterface::getInteger()</code> to return a <code>Ramsey\Uuid\Type\IntegerValue</code> instance.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Round microseconds to six digits when getting DateTime from v1 UUIDs. This
+circumvents a needless exception for an otherwise valid time-based UUID.</li>
+</ul>
+<h2 id="4-0-0-alpha1-2020-01-22"><a href="https://github.com/ramsey/uuid/compare/3.9.3...4.0.0-alpha1">4.0.0-alpha1</a> - 2020-01-22</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add <code>Validator\ValidatorInterface</code> and <code>Validator\GenericValidator</code> to allow
+flexibility in validating UUIDs/GUIDs.<ul>
+<li>Add ability to change the default validator used by <code>Uuid</code> through
+<code>FeatureSet::setValidator()</code>.</li>
+<li>Add <code>getValidator()</code> and <code>setValidator()</code> to <code>UuidFactory</code>.</li>
+</ul>
+</li>
+<li>Add an internal <code>InvalidArgumentException</code> that descends from the built-in
+PHP <code>\InvalidArgumentException</code>. All places that used to throw
+<code>\InvalidArgumentException</code> now throw <code>Ramsey\Uuid\Exception\InvalidArgumentException</code>.
+This should not cause any BC breaks, however.</li>
+<li>Add an internal <code>DateTimeException</code> that descends from the built-in PHP
+<code>\RuntimeException</code>. <code>Uuid::getDateTime()</code> may throw this exception if
+<code>\DateTimeImmutable</code> throws an error or exception.</li>
+<li>Add <code>RandomSourceException</code> that descends from the built-in PHP
+<code>\RuntimeException</code>. <code>DefaultTimeGenerator</code>, <code>RandomBytesGenerator</code>, and
+<code>RandomNodeProvider</code> may throw this exception if <code>random_bytes()</code> or
+<code>random_int()</code> throw an error or exception.</li>
+<li>Add <code>Fields\FieldsInterface</code> and <code>Rfc4122\FieldsInterface</code> to define
+field layouts for UUID variants. The implementations <code>Rfc4122\Fields</code>,
+<code>Guid\Fields</code>, and <code>Nonstandard\Fields</code> store the 16-byte,
+binary string representation of the UUID internally, and these manage
+conversion of the binary string into the hexadecimal field values.</li>
+<li>Add <code>Rfc4122\UuidInterface</code> to specifically represent RFC 4122 variant UUIDs.</li>
+<li>Add classes to represent each version of RFC 4122 UUID. When generating new
+UUIDs or creating UUIDs from existing strings, bytes, or integers, if the UUID
+is an RFC 4122 variant, one of these instances will be returned:<ul>
+<li><code>Rfc4122\UuidV1</code></li>
+<li><code>Rfc4122\UuidV2</code></li>
+<li><code>Rfc4122\UuidV3</code></li>
+<li><code>Rfc4122\UuidV4</code></li>
+<li><code>Rfc4122\UuidV5</code></li>
+<li><code>Rfc4122\NilUuid</code></li>
+</ul>
+</li>
+<li>Add <code>Rfc4122\UuidBuilder</code> to build RFC 4122 variant UUIDs. This replaces the
+existing <code>Builder\DefaultUuidBuilder</code>, which is now deprecated.</li>
+<li>Add ability to generate version 2 (DCE Security) UUIDs, including the static
+method <code>Uuid::uuid2()</code>, which returns an <code>Rfc4122\UuidV2</code> instance.</li>
+<li>Add classes to represent GUIDs and nonstandard (non-RFC 4122 variant) UUIDs:<ul>
+<li><code>Guid\Guid</code></li>
+<li><code>Nonstandard\Uuid</code>.</li>
+</ul>
+</li>
+<li>Introduce a <code>Builder\FallbackBuilder</code>, used by <code>FeatureSet</code> to help decide
+whether to return a <code>Uuid</code> or <code>Nonstandard\Uuid</code> when decoding a
+UUID string or bytes.</li>
+<li>Introduce <code>Type\Hexadecimal</code>, <code>Type\IntegerValue</code>, and <code>Type\Time</code> for
+improved type-safety when dealing with arbitrary string values.</li>
+<li>Introduce <code>Math\CalculatorInterface</code> for representing calculators to perform
+arithmetic operations on integers.</li>
+<li>Depend on <a href="https://github.com/brick/math">brick/math</a> for the
+<code>Math\BrickMathCalculator</code>, which is the default calculator used by this
+library when math cannot be performed in native PHP due to integer size
+limitations. The calculator is configurable and may be changed, if desired.</li>
+<li>Add <code>Converter\Number\GenericNumberConverter</code> and
+<code>Converter\Time\GenericTimeConverter</code> which will use the calculator provided
+to convert numbers and time to values for UUIDs.</li>
+<li>The <code>\DateTimeInterface</code> instance returned by <code>UuidInterface::getDateTime()</code>
+(and now <code>Rfc4122\UuidV1::getDateTime()</code>) now includes microseconds, as
+specified by the version 1 UUID.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Set minimum required PHP version to 7.2.</li>
+<li>Add <code>__toString()</code> method to <code>UuidInterface</code>.</li>
+<li>The <code>UuidInterface::getDateTime()</code> method now specifies <code>\DateTimeInterface</code>
+as the return value, rather than <code>\DateTime</code>; <code>Uuid::getDateTime()</code> now
+returns an instance of <code>\DateTimeImmutable</code> instead of <code>\DateTime</code>.</li>
+<li>Add <code>getFields()</code> method to <code>UuidInterface</code>.</li>
+<li>Add <code>getValidator()</code> method to <code>UuidFactoryInterface</code>.</li>
+<li>Add <code>uuid2()</code> method to <code>UuidFactoryInterface</code>.</li>
+<li>Add <code>convertTime()</code> method to <code>Converter\TimeConverterInterface</code>.</li>
+<li>Add <code>getTime()</code> method to <code>Provider\TimeProviderInterface</code>.</li>
+<li>Change <code>Uuid::getFields()</code> to return an instance of <code>Fields\FieldsInterface</code>.
+Previously, it returned an array of integer values (on 64-bit systems only).</li>
+<li>Change the first required constructor parameter for <code>Uuid</code> from
+<code>array $fields</code> to <code>Rfc4122\FieldsInterface $fields</code>.</li>
+<li>Introduce <code>Converter\TimeConverterInterface $timeConverter</code> as fourth required
+constructor parameter for <code>Uuid</code> and second required constructor parameter for
+<code>Builder\DefaultUuidBuilder</code>.</li>
+<li>Change <code>UuidInterface::getInteger()</code> to always return a <code>string</code> value instead
+of <code>mixed</code>. This is a string representation of a 128-bit integer. You may then
+use a math library of your choice (bcmath, gmp, etc.) to operate on the
+string integer.</li>
+<li>Change the second required parameter of <code>Builder\UuidBuilderInterface::build()</code>
+from <code>array $fields</code> to <code>string $bytes</code>. Rather than accepting an array of
+hexadecimal strings as UUID fields, the <code>build()</code> method now expects a byte
+string.</li>
+<li><code>Generator\DefaultTimeGenerator</code> no longer adds the variant and version bits
+to the bytes it returns. These must be applied to the bytes afterwards.</li>
+<li><code>Converter/TimeConverterInterface::calculateTime()</code> now returns
+<code>Type\Hexadecimal</code> instead of <code>array</code>. The value is the full UUID timestamp
+value (count of 100-nanosecond intervals since the Gregorian calendar epoch)
+in hexadecimal format.</li>
+<li>Change methods in converter interfaces to accept and return string values
+instead of <code>mixed</code>; this simplifies the interface and makes it consistent:<ul>
+<li><code>NumberConverterInterface::fromHex(string $hex): string</code></li>
+<li><code>NumberConverterInterface::toHex(string $number): string</code></li>
+<li><code>TimeConverterInterface::calculateTime(string $seconds, string $microseconds): array</code></li>
+</ul>
+</li>
+<li><code>UnsupportedOperationException</code> is now descended from <code>\LogicException</code>.
+Previously, it descended from <code>\RuntimeException</code>.</li>
+<li>When encoding to bytes or decoding from bytes, <code>OrderedTimeCodec</code> now checks
+whether the UUID is an RFC 4122 variant, version 1 UUID. If not, it will throw
+an exception—<code>InvalidArgumentException</code> when using
+<code>OrderedTimeCodec::encodeBinary()</code> and <code>UnsupportedOperationException</code> when
+using <code>OrderedTimeCodec::decodeBytes()</code>.</li>
+<li>Out of the box, <code>Uuid::fromString()</code>, <code>Uuid::fromBytes()</code>, and
+<code>Uuid::fromInteger()</code> will now return either an <code>Rfc4122\UuidInterface</code>
+instance or an instance of <code>Nonstandard\Uuid</code>, depending on whether the input
+contains an RFC 4122 variant UUID with a valid version identifier. Both
+implement <code>UuidInterface</code>, so BC breaks should not occur if typehints use the
+interface.</li>
+<li>By default, the following static methods will now return the specific instance
+types. This should not cause any BC breaks if typehints target <code>UuidInterface</code>:<ul>
+<li><code>Uuid::uuid1</code> returns <code>Rfc4122\UuidV1</code></li>
+<li><code>Uuid::uuid3</code> returns <code>Rfc4122\UuidV3</code></li>
+<li><code>Uuid::uuid4</code> returns <code>Rfc4122\UuidV4</code></li>
+<li><code>Uuid::uuid5</code> returns <code>Rfc4122\UuidV5</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="deprecated">Deprecated</h3>
+<p>The following functionality is deprecated and will be removed in ramsey/uuid
+5.0.0.</p>
+<ul>
+<li>The following methods from <code>UuidInterface</code> and <code>Uuid</code> are deprecated. Use their
+counterparts on the <code>Rfc4122\FieldsInterface</code> returned by <code>Uuid::getFields()</code>.<ul>
+<li><code>getClockSeqHiAndReservedHex()</code></li>
+<li><code>getClockSeqLowHex()</code></li>
+<li><code>getClockSequenceHex()</code></li>
+<li><code>getFieldsHex()</code></li>
+<li><code>getNodeHex()</code></li>
+<li><code>getTimeHiAndVersionHex()</code></li>
+<li><code>getTimeLowHex()</code></li>
+<li><code>getTimeMidHex()</code></li>
+<li><code>getTimestampHex()</code></li>
+<li><code>getVariant()</code></li>
+<li><code>getVersion()</code></li>
+</ul>
+</li>
+<li>The following methods from <code>Uuid</code> are deprecated. Use the <code>Rfc4122\FieldsInterface</code>
+instance returned by <code>Uuid::getFields()</code> to get the <code>Type\Hexadecimal</code> value
+for these fields, and then use the arbitrary-precision arithmetic library of
+your choice to convert them to string integers.<ul>
+<li><code>getClockSeqHiAndReserved()</code></li>
+<li><code>getClockSeqLow()</code></li>
+<li><code>getClockSequence()</code></li>
+<li><code>getNode()</code></li>
+<li><code>getTimeHiAndVersion()</code></li>
+<li><code>getTimeLow()</code></li>
+<li><code>getTimeMid()</code></li>
+<li><code>getTimestamp()</code></li>
+</ul>
+</li>
+<li><code>getDateTime()</code> on <code>UuidInterface</code> and <code>Uuid</code> is deprecated. Use this method
+only on instances of <code>Rfc4122\UuidV1</code>.</li>
+<li><code>getUrn()</code> on <code>UuidInterface</code> and <code>Uuid</code> is deprecated. It is available on
+<code>Rfc4122\UuidInterface</code> and classes that implement it.</li>
+<li>The following methods are deprecated and have no direct replacements. However,
+you may obtain the same information by calling <code>UuidInterface::getHex()</code> and
+splitting the return value in half.<ul>
+<li><code>UuidInterface::getLeastSignificantBitsHex()</code></li>
+<li><code>UuidInterface::getMostSignificantBitsHex()</code></li>
+<li><code>Uuid::getLeastSignificantBitsHex()</code></li>
+<li><code>Uuid::getMostSignificantBitsHex()</code></li>
+<li><code>Uuid::getLeastSignificantBits()</code></li>
+<li><code>Uuid::getMostSignificantBits()</code></li>
+</ul>
+</li>
+<li><code>UuidInterface::getNumberConverter()</code> and <code>Uuid::getNumberConverter()</code> are
+deprecated. There is no alternative recommendation, so plan accordingly.</li>
+<li><code>Builder\DefaultUuidBuilder</code> is deprecated; transition to
+<code>Rfc4122\UuidBuilder</code>.</li>
+<li><code>Converter\Number\BigNumberConverter</code> is deprecated; transition to
+<code>Converter\Number\GenericNumberConverter</code>.</li>
+<li><code>Converter\Time\BigNumberTimeConverter</code> is deprecated; transition to
+<code>Converter\Time\GenericTimeConverter</code>.</li>
+<li><code>Provider\TimeProviderInterface::currentTime()</code> is deprecated; transition to
+the <code>getTimestamp()</code> method on the same interface.</li>
+<li>The classes for representing and generating <em>degraded</em> UUIDs are deprecated.
+These are no longer necessary; this library now behaves the same on 32-bit and
+64-bit PHP.<ul>
+<li><code>Builder\DegradedUuidBuilder</code></li>
+<li><code>Converter\Number\DegradedNumberConverter</code></li>
+<li><code>Converter\Time\DegradedTimeConverter</code></li>
+<li><code>DegradedUuid</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Remove the following bytes generators and recommend
+<code>Generator\RandomBytesGenerator</code> as a suitable replacement:<ul>
+<li><code>Generator\MtRandGenerator</code></li>
+<li><code>Generator\OpenSslGenerator</code></li>
+<li><code>Generator\SodiumRandomGenerator</code></li>
+</ul>
+</li>
+<li>Remove <code>Exception\UnsatisfiedDependencyException</code>. This library no longer
+throws this exception.</li>
+</ul>
+<h2 id="3-9-3-2020-02-20"><a href="https://github.com/ramsey/uuid/compare/3.9.2...3.9.3">3.9.3</a> - 2020-02-20</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><p>For v1 UUIDs, round down for timestamps so that microseconds do not bump the
+timestamp to the next second.</p>
+<p>As an example, consider the case of timestamp <code>1</code> with  <code>600000</code> microseconds
+(<code>1.600000</code>). This is the first second after midnight on January 1, 1970, UTC.
+Previous versions of this library had a bug that would round this to <code>2</code>, so
+the rendered time was <code>1970-01-01 00:00:02</code>. This was incorrect. Despite
+having <code>600000</code> microseconds, the time should not round up to the next second.
+Rather, the time should be <code>1970-01-01 00:00:01.600000</code>. Since this version of
+ramsey/uuid does not support microseconds, the microseconds are dropped, and
+the time is <code>1970-01-01 00:00:01</code>. No rounding should occur.</p>
+</li>
+</ul>
+<h2 id="3-9-2-2019-12-17"><a href="https://github.com/ramsey/uuid/compare/3.9.1...3.9.2">3.9.2</a> - 2019-12-17</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Check whether files returned by <code>/sys/class/net/*/address</code> are readable
+before attempting to read them. This avoids a PHP warning that was being
+emitted on hosts that do not grant permission to read these files.</li>
+</ul>
+<h2 id="3-9-1-2019-12-01"><a href="https://github.com/ramsey/uuid/compare/3.9.0...3.9.1">3.9.1</a> - 2019-12-01</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix <code>RandomNodeProvider</code> behavior on 32-bit systems. The <code>RandomNodeProvider</code>
+was converting a 6-byte string to a decimal number, which is a 48-bit,
+unsigned integer. This caused problems on 32-bit systems and has now been
+resolved.</li>
+</ul>
+<h2 id="3-9-0-2019-11-30"><a href="https://github.com/ramsey/uuid/compare/3.8.0...3.9.0">3.9.0</a> - 2019-11-30</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add function API as convenience. The functions are available in the
+<code>Ramsey\Uuid</code> namespace.<ul>
+<li><code>v1(int|string|null $node = null, int|null $clockSeq = null): string</code></li>
+<li><code>v3(string|UuidInterface $ns, string $name): string</code></li>
+<li><code>v4(): string</code></li>
+<li><code>v5(string|UuidInterface $ns, string $name): string</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Use paragonie/random-lib instead of ircmaxell/random-lib. This is a
+non-breaking change.</li>
+<li>Use a high-strength generator by default, when using <code>RandomLibAdapter</code>. This
+is a non-breaking change.</li>
+</ul>
+<h3 id="deprecated">Deprecated</h3>
+<p>These will be removed in ramsey/uuid version 4.0.0:</p>
+<ul>
+<li><code>MtRandGenerator</code>, <code>OpenSslGenerator</code>, and <code>SodiumRandomGenerator</code> are
+deprecated in favor of using the default <code>RandomBytesGenerator</code>.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Set <code>ext-json</code> as a required dependency in <code>composer.json</code>.</li>
+<li>Use <code>PHP_OS</code> instead of <code>php_uname()</code> when determining the system OS, for
+cases when <code>php_uname()</code> is disabled for security reasons.</li>
+</ul>
+<h2 id="3-8-0-2018-07-19"><a href="https://github.com/ramsey/uuid/compare/3.7.3...3.8.0">3.8.0</a> - 2018-07-19</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Support discovery of MAC addresses on FreeBSD systems</li>
+<li>Use a polyfill to provide PHP ctype functions when running on systems where the
+ctype functions are not part of the PHP build</li>
+<li>Disallow a trailing newline character when validating UUIDs</li>
+<li>Annotate thrown exceptions for improved IDE hinting</li>
+</ul>
+<h2 id="3-7-3-2018-01-19"><a href="https://github.com/ramsey/uuid/compare/3.7.2...3.7.3">3.7.3</a> - 2018-01-19</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Gracefully handle cases where <code>glob()</code> returns false when searching
+<code>/sys/class/net/*/address</code> files on Linux</li>
+<li>Fix off-by-one error in <code>DefaultTimeGenerator</code></li>
+</ul>
+<h3 id="security">Security</h3>
+<ul>
+<li>Switch to <code>random_int()</code> from <code>mt_rand()</code> for better random numbers</li>
+</ul>
+<h2 id="3-7-2-2018-01-13"><a href="https://github.com/ramsey/uuid/compare/3.7.1...3.7.2">3.7.2</a> - 2018-01-13</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Check sysfs on Linux to determine the node identifier; this provides a
+reliable way to identify the node on Docker images, etc.</li>
+</ul>
+<h2 id="3-7-1-2017-09-22"><a href="https://github.com/ramsey/uuid/compare/3.7.0...3.7.1">3.7.1</a> - 2017-09-22</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Set the multicast bit for random nodes, according to RFC 4122, §4.5</li>
+</ul>
+<h3 id="security">Security</h3>
+<ul>
+<li>Use <code>random_bytes()</code> when generating random nodes</li>
+</ul>
+<h2 id="3-7-0-2017-08-04"><a href="https://github.com/ramsey/uuid/compare/3.6.1...3.7.0">3.7.0</a> - 2017-08-04</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add the following UUID version constants:<ul>
+<li><code>Uuid::UUID_TYPE_TIME</code></li>
+<li><code>Uuid::UUID_TYPE_IDENTIFIER</code></li>
+<li><code>Uuid::UUID_TYPE_HASH_MD5</code></li>
+<li><code>Uuid::UUID_TYPE_RANDOM</code></li>
+<li><code>Uuid::UUID_TYPE_HASH_SHA1</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-6-1-2017-03-26"><a href="https://github.com/ramsey/uuid/compare/3.6.0...3.6.1">3.6.1</a> - 2017-03-26</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Optimize UUID string decoding by using <code>str_pad()</code> instead of <code>sprintf()</code></li>
+</ul>
+<h2 id="3-6-0-2017-03-18"><a href="https://github.com/ramsey/uuid/compare/3.5.2...3.6.0">3.6.0</a> - 2017-03-18</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add <code>InvalidUuidStringException</code>, which is thrown when attempting to decode an
+invalid string UUID; this does not introduce any BC issues, since the new
+exception inherits from the previously used <code>InvalidArgumentException</code></li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Improve memory usage when generating large quantities of UUIDs (use <code>str_pad()</code>
+and <code>dechex()</code> instead of <code>sprintf()</code>)</li>
+</ul>
+<h2 id="3-5-2-2016-11-22"><a href="https://github.com/ramsey/uuid/compare/3.5.1...3.5.2">3.5.2</a> - 2016-11-22</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Improve test coverage</li>
+</ul>
+<h2 id="3-5-1-2016-10-02"><a href="https://github.com/ramsey/uuid/compare/3.5.0...3.5.1">3.5.1</a> - 2016-10-02</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix issue where the same UUIDs were not being treated as equal when using
+mixed cases</li>
+</ul>
+<h2 id="3-5-0-2016-08-02"><a href="https://github.com/ramsey/uuid/compare/3.4.1...3.5.0">3.5.0</a> - 2016-08-02</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add <code>OrderedTimeCodec</code> to store UUID in an optimized way for InnoDB</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix invalid node generation in <code>RandomNodeProvider</code></li>
+<li>Avoid multiple unnecessary system calls by caching failed attempt to retrieve
+system node</li>
+</ul>
+<h2 id="3-4-1-2016-04-23"><a href="https://github.com/ramsey/uuid/compare/3.4.0...3.4.1">3.4.1</a> - 2016-04-23</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix test that violated a PHP CodeSniffer rule, breaking the build</li>
+</ul>
+<h2 id="3-4-0-2016-04-23"><a href="https://github.com/ramsey/uuid/compare/3.3.0...3.4.0">3.4.0</a> - 2016-04-23</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add <code>TimestampFirstCombCodec</code> and <code>TimestampLastCombCodec</code> codecs to provide
+the ability to generate <a href="http://www.informit.com/articles/article.aspx?p=25862&amp;seqNum=7">COMB sequential UUIDs</a> with the timestamp encoded as
+either the first 48 bits or the last 48 bits</li>
+<li>Improve logic of <code>CombGenerator</code> for COMB sequential UUIDs</li>
+</ul>
+<h2 id="3-3-0-2016-03-22"><a href="https://github.com/ramsey/uuid/compare/3.2.0...3.3.0">3.3.0</a> - 2016-03-22</h2>
+<h3 id="security">Security</h3>
+<ul>
+<li>Drop the use of OpenSSL as a fallback and use <a href="https://github.com/paragonie/random_compat">paragonie/random_compat</a> to
+support <code>RandomBytesGenerator</code> in versions of PHP earlier than 7.0;
+this addresses and fixes the <a href="https://github.com/ramsey/uuid/issues/80">collision issue</a></li>
+</ul>
+<h2 id="3-2-0-2016-02-17"><a href="https://github.com/ramsey/uuid/compare/3.1.0...3.2.0">3.2.0</a> - 2016-02-17</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add <code>SodiumRandomGenerator</code> to allow use of the <a href="http://pecl.php.net/package/libsodium">PECL libsodium extension</a> as
+a random bytes generator when creating UUIDs</li>
+</ul>
+<h2 id="3-1-0-2015-12-17"><a href="https://github.com/ramsey/uuid/compare/3.0.1...3.1.0">3.1.0</a> - 2015-12-17</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Implement the PHP <code>Serializable</code> interface to provide the ability to
+serialize/unserialize UUID objects</li>
+</ul>
+<h2 id="3-0-1-2015-10-21"><a href="https://github.com/ramsey/uuid/compare/3.0.0...3.0.1">3.0.1</a> - 2015-10-21</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Adopt the <a href="https://github.com/ramsey/uuid/blob/master/.github/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a> for this project</li>
+</ul>
+<h2 id="3-0-0-2015-09-28"><a href="https://github.com/ramsey/uuid/compare/3.0.0-beta1...3.0.0">3.0.0</a> - 2015-09-28</h2>
+<p>The 3.0.0 release represents a significant step for the ramsey/uuid library.
+While the simple and familiar API used in previous versions remains intact, this
+release provides greater flexibility to integrators, including the ability to
+inject your own number generators, UUID codecs, node and time providers, and
+more.</p>
+<p><em>Please note: The changelog for 3.0.0 includes all notes from the alpha and beta
+versions leading up to this release.</em></p>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add a number of generators that may be used to override the library defaults
+for generating random bytes (version 4) or time-based (version 1) UUIDs<ul>
+<li><code>CombGenerator</code> to allow generation of sequential UUIDs</li>
+<li><code>OpenSslGenerator</code> to generate random bytes on systems where
+<code>openssql_random_pseudo_bytes()</code> is present</li>
+<li><code>MtRandGenerator</code> to provide a fallback in the event other random generators
+are not present</li>
+<li><code>RandomLibAdapter</code> to allow use of <a href="https://github.com/ircmaxell/RandomLib">ircmaxell/random-lib</a></li>
+<li><code>RandomBytesGenerator</code> for use with PHP 7; ramsey/uuid will default to use
+this generator when running on PHP 7</li>
+<li>Refactor time-based (version 1) UUIDs into a <code>TimeGeneratorInterface</code> to
+allow for other sources to generate version 1 UUIDs in this library</li>
+<li><code>PeclUuidTimeGenerator</code> and <code>PeclUuidRandomGenerator</code> for creating version
+1 or version 4 UUIDs using the pecl-uuid extension</li>
+</ul>
+</li>
+<li>Add a <code>setTimeGenerator</code> method on <code>UuidFactory</code> to override the default time
+generator</li>
+<li>Add option to enable <code>PeclUuidTimeGenerator</code> via <code>FeatureSet</code></li>
+<li>Support GUID generation by configuring a <code>FeatureSet</code> to use GUIDs</li>
+<li>Allow UUIDs to be serialized as JSON through <code>JsonSerializable</code></li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Change root namespace from &quot;Rhumsaa&quot; to &quot;Ramsey;&quot; in most cases, simply
+making this change in your applications is the only upgrade path you will
+need—everything else should work as expected</li>
+<li>No longer consider <code>Uuid</code> class as <code>final</code>; everything is now based around
+interfaces and factories, allowing you to use this package as a base to
+implement other kinds of UUIDs with different dependencies</li>
+<li>Return an object of type <code>DegradedUuid</code> on 32-bit systems to indicate that
+certain features are not available</li>
+<li>Default <code>RandomLibAdapter</code> to a medium-strength generator with
+<a href="https://github.com/ircmaxell/RandomLib">ircmaxell/random-lib</a>; this is configurable, so other generator strengths may
+be used</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Remove <code>PeclUuidFactory</code> in favor of using pecl-uuid with generators</li>
+<li>Remove <code>timeConverter</code> and <code>timeProvider</code> properties, setters, and getters in
+both <code>FeatureSet</code> and <code>UuidFactory</code> as those are now exclusively used by the
+default <code>TimeGenerator</code></li>
+<li>Move UUID <a href="http://doctrine-dbal.readthedocs.org/en/latest/reference/types.html">Doctrine field type</a> to <a href="https://github.com/ramsey/uuid-doctrine">ramsey/uuid-doctrine</a></li>
+<li>Move <code>uuid</code> console application to <a href="https://github.com/ramsey/uuid-console">ramsey/uuid-console</a></li>
+<li>Remove <code>Uuid::VERSION</code> package version constant</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Improve GUID support to ensure that:<ul>
+<li>On little endian (LE) architectures, the byte order of the first three
+fields is LE</li>
+<li>On big endian (BE) architectures, it is the same as a GUID</li>
+<li>String representation is always the same</li>
+</ul>
+</li>
+<li>Fix exception message for <code>DegradedNumberConverter::fromHex()</code></li>
+</ul>
+<h2 id="3-0-0-beta1-2015-08-31"><a href="https://github.com/ramsey/uuid/compare/3.0.0-alpha3...3.0.0-beta1">3.0.0-beta1</a> - 2015-08-31</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Improve GUID support to ensure that:<ul>
+<li>On little endian (LE) architectures, the byte order of the first three
+fields is LE</li>
+<li>On big endian (BE) architectures, it is the same as a GUID</li>
+<li>String representation is always the same</li>
+</ul>
+</li>
+<li>Fix exception message for <code>DegradedNumberConverter::fromHex()</code></li>
+</ul>
+<h2 id="3-0-0-alpha3-2015-07-28"><a href="https://github.com/ramsey/uuid/compare/3.0.0-alpha2...3.0.0-alpha3">3.0.0-alpha3</a> - 2015-07-28</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Enable use of custom <code>TimeGenerator</code> implementations</li>
+<li>Add a <code>setTimeGenerator</code> method on <code>UuidFactory</code> to override the default time
+generator</li>
+<li>Add option to enable <code>PeclUuidTimeGenerator</code> via <code>FeatureSet</code></li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Remove <code>timeConverter</code> and <code>timeProvider</code> properties, setters, and getters in
+both <code>FeatureSet</code> and <code>UuidFactory</code> as those are now exclusively used by the
+default <code>TimeGenerator</code></li>
+</ul>
+<h2 id="3-0-0-alpha2-2015-07-28"><a href="https://github.com/ramsey/uuid/compare/3.0.0-alpha1...3.0.0-alpha2">3.0.0-alpha2</a> - 2015-07-28</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Refactor time-based (version 1) UUIDs into a <code>TimeGeneratorInterface</code> to allow
+for other sources to generate version 1 UUIDs in this library</li>
+<li>Add <code>PeclUuidTimeGenerator</code> and <code>PeclUuidRandomGenerator</code> for creating version
+1 or version 4 UUIDs using the pecl-uuid extension</li>
+<li>Add <code>RandomBytesGenerator</code> for use with PHP 7. ramsey/uuid will default to use
+this generator when running on PHP 7</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Default <code>RandomLibAdapter</code> to a medium-strength generator with
+<a href="https://github.com/ircmaxell/RandomLib">ircmaxell/random-lib</a>; this is configurable, so other generator strengths may
+be used</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Remove <code>PeclUuidFactory</code> in favor of using pecl-uuid with generators</li>
+</ul>
+<h2 id="3-0-0-alpha1-2015-07-16"><a href="https://github.com/ramsey/uuid/compare/2.9.0...3.0.0-alpha1">3.0.0-alpha1</a> - 2015-07-16</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Allow dependency injection through <code>UuidFactory</code> and/or extending <code>FeatureSet</code>
+to override any package defaults</li>
+<li>Add a number of generators that may be used to override the library defaults:<ul>
+<li><code>CombGenerator</code> to allow generation of sequential UUIDs</li>
+<li><code>OpenSslGenerator</code> to generate random bytes on systems where
+<code>openssql_random_pseudo_bytes()</code> is present</li>
+<li><code>MtRandGenerator</code> to provide a fallback in the event other random generators
+are not present</li>
+<li><code>RandomLibAdapter</code> to allow use of <a href="https://github.com/ircmaxell/RandomLib">ircmaxell/random-lib</a></li>
+</ul>
+</li>
+<li>Support GUID generation by configuring a <code>FeatureSet</code> to use GUIDs</li>
+<li>Allow UUIDs to be serialized as JSON through <code>JsonSerializable</code></li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Change root namespace from &quot;Rhumsaa&quot; to &quot;Ramsey;&quot; in most cases, simply
+making this change in your applications is the only upgrade path you will
+need—everything else should work as expected</li>
+<li>No longer consider <code>Uuid</code> class as <code>final</code>; everything is now based around
+interfaces and factories, allowing you to use this package as a base to
+implement other kinds of UUIDs with different dependencies</li>
+<li>Return an object of type <code>DegradedUuid</code> on 32-bit systems to indicate that
+certain features are not available</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Move UUID <a href="http://doctrine-dbal.readthedocs.org/en/latest/reference/types.html">Doctrine field type</a> to <a href="https://github.com/ramsey/uuid-doctrine">ramsey/uuid-doctrine</a></li>
+<li>Move <code>uuid</code> console application to <a href="https://github.com/ramsey/uuid-console">ramsey/uuid-console</a></li>
+<li>Remove <code>Uuid::VERSION</code> package version constant</li>
+</ul>
+<h2 id="2-9-0-2016-03-22"><a href="https://github.com/ramsey/uuid/compare/2.8.4...2.9.0">2.9.0</a> - 2016-03-22</h2>
+<h3 id="security">Security</h3>
+<ul>
+<li>Drop the use of OpenSSL as a fallback and use <a href="https://github.com/paragonie/random_compat">paragonie/random_compat</a> to
+support <code>RandomBytesGenerator</code> in versions of PHP earlier than 7.0;
+this addresses and fixes the <a href="https://github.com/ramsey/uuid/issues/80">collision issue</a></li>
+</ul>
+<h2 id="2-8-4-2015-12-17"><a href="https://github.com/ramsey/uuid/compare/2.8.3...2.8.4">2.8.4</a> - 2015-12-17</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add support for symfony/console v3 in the <code>uuid</code> CLI application</li>
+</ul>
+<h2 id="2-8-3-2015-08-31"><a href="https://github.com/ramsey/uuid/compare/2.8.2...2.8.3">2.8.3</a> - 2015-08-31</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix exception message in <code>Uuid::calculateUuidTime()</code></li>
+</ul>
+<h2 id="2-8-2-2015-07-23"><a href="https://github.com/ramsey/uuid/compare/2.8.1...2.8.2">2.8.2</a> - 2015-07-23</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Ensure the release tag makes it into the rhumsaa/uuid package</li>
+</ul>
+<h2 id="2-8-1-2015-06-16"><a href="https://github.com/ramsey/uuid/compare/2.8.0...2.8.1">2.8.1</a> - 2015-06-16</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Use <code>passthru()</code> and output buffering in <code>getIfconfig()</code></li>
+<li>Cache the system node in a static variable so that we process it only once per
+runtime</li>
+</ul>
+<h2 id="2-8-0-2014-11-09"><a href="https://github.com/ramsey/uuid/compare/2.7.4...2.8.0">2.8.0</a> - 2014-11-09</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add static <code>fromInteger()</code> method to create UUIDs from string integer or
+<code>Moontoast\Math\BigNumber</code></li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Improve Doctrine conversion to Uuid or string for the ramsey/uuid <a href="http://doctrine-dbal.readthedocs.org/en/latest/reference/types.html">Doctrine field type</a></li>
+</ul>
+<h2 id="2-7-4-2014-10-29"><a href="https://github.com/ramsey/uuid/compare/2.7.3...2.7.4">2.7.4</a> - 2014-10-29</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Change loop in <code>generateBytes()</code> from <code>foreach</code> to <code>for</code></li>
+</ul>
+<h2 id="2-7-3-2014-08-27"><a href="https://github.com/ramsey/uuid/compare/2.7.2...2.7.3">2.7.3</a> - 2014-08-27</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix upper range for <code>mt_rand</code> used in version 4 UUIDs</li>
+</ul>
+<h2 id="2-7-2-2014-07-28"><a href="https://github.com/ramsey/uuid/compare/2.7.1...2.7.2">2.7.2</a> - 2014-07-28</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Upgrade to PSR-4 autoloading</li>
+</ul>
+<h2 id="2-7-1-2014-02-19"><a href="https://github.com/ramsey/uuid/compare/2.7.0...2.7.1">2.7.1</a> - 2014-02-19</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Move moontoast/math and symfony/console to require-dev</li>
+<li>Support symfony/console 2.3 (LTS version)</li>
+</ul>
+<h2 id="2-7-0-2014-01-31"><a href="https://github.com/ramsey/uuid/compare/2.6.1...2.7.0">2.7.0</a> - 2014-01-31</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add <code>Uuid::VALID_PATTERN</code> constant containing a UUID validation regex pattern</li>
+</ul>
+<h2 id="2-6-1-2014-01-27"><a href="https://github.com/ramsey/uuid/compare/2.6.0...2.6.1">2.6.1</a> - 2014-01-27</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix bug where <code>uuid</code> console application could not find the Composer
+autoloader when installed in another project</li>
+</ul>
+<h2 id="2-6-0-2014-01-17"><a href="https://github.com/ramsey/uuid/compare/2.5.0...2.6.0">2.6.0</a> - 2014-01-17</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Introduce <code>uuid</code> console application for generating and decoding UUIDs from
+CLI (run <code>./bin/uuid</code> for details)</li>
+<li>Add <code>Uuid::getInteger()</code> to retrieve a <code>Moontoast\Math\BigNumber</code>
+representation of the 128-bit integer representing the UUID</li>
+<li>Add <code>Uuid::getHex()</code> to retrieve the hexadecimal representation of the UUID</li>
+<li>Use <code>netstat</code> on Linux to capture the node for a version 1 UUID</li>
+<li>Require moontoast/math as part of the regular package requirements</li>
+</ul>
+<h2 id="2-5-0-2013-10-30"><a href="https://github.com/ramsey/uuid/compare/2.4.0...2.5.0">2.5.0</a> - 2013-10-30</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Use <code>openssl_random_pseudo_bytes()</code>, if available, to generate random bytes</li>
+</ul>
+<h2 id="2-4-0-2013-07-29"><a href="https://github.com/ramsey/uuid/compare/2.3.0...2.4.0">2.4.0</a> - 2013-07-29</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Return <code>null</code> from <code>Uuid::getVersion()</code> if the UUID isn&#39;t an RFC 4122 variant</li>
+<li>Support string UUIDs without dashes passed to <code>Uuid::fromString()</code></li>
+</ul>
+<h2 id="2-3-0-2013-07-16"><a href="https://github.com/ramsey/uuid/compare/2.2.0...2.3.0">2.3.0</a> - 2013-07-16</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Support creation of UUIDs from bytes with <code>Uuid::fromBytes()</code></li>
+</ul>
+<h2 id="2-2-0-2013-07-04"><a href="https://github.com/ramsey/uuid/compare/2.1.2...2.2.0">2.2.0</a> - 2013-07-04</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add <code>Doctrine\UuidType::requiresSQLCommentHint()</code> method</li>
+</ul>
+<h2 id="2-1-2-2013-07-03"><a href="https://github.com/ramsey/uuid/compare/2.1.1...2.1.2">2.1.2</a> - 2013-07-03</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix cases where the system node was coming back with uppercase hexadecimal
+digits; this ensures that case in the node is converted to lowercase</li>
+</ul>
+<h2 id="2-1-1-2013-04-29"><a href="https://github.com/ramsey/uuid/compare/2.1.0...2.1.1">2.1.1</a> - 2013-04-29</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fix bug in <code>Uuid::isValid()</code> where the NIL UUID was not reported as valid</li>
+</ul>
+<h2 id="2-1-0-2013-04-15"><a href="https://github.com/ramsey/uuid/compare/2.0.0...2.1.0">2.1.0</a> - 2013-04-15</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Allow checking the validity of a UUID through the <code>Uuid::isValid()</code> method</li>
+</ul>
+<h2 id="2-0-0-2013-02-11"><a href="https://github.com/ramsey/uuid/compare/1.1.2...2.0.0">2.0.0</a> - 2013-02-11</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Support UUID generation on 32-bit platforms</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Mark <code>Uuid</code> class <code>final</code></li>
+<li>Require moontoast/math on 64-bit platforms for
+<code>Uuid::getLeastSignificantBits()</code> and <code>Uuid::getMostSignificantBits()</code>; the
+integers returned by these methods are <em>unsigned</em> 64-bit integers and
+unsupported even on 64-bit builds of PHP</li>
+<li>Move <code>UnsupportedOperationException</code> to the <code>Exception</code> subnamespace</li>
+</ul>
+<h2 id="1-1-2-2012-11-29"><a href="https://github.com/ramsey/uuid/compare/1.1.1...1.1.2">1.1.2</a> - 2012-11-29</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Relax <a href="http://doctrine-dbal.readthedocs.org/en/latest/reference/types.html">Doctrine field type</a> conversion rules for UUIDs</li>
+</ul>
+<h2 id="1-1-1-2012-08-27"><a href="https://github.com/ramsey/uuid/compare/1.1.0...1.1.1">1.1.1</a> - 2012-08-27</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Remove <code>final</code> keyword from <code>Uuid</code> class</li>
+</ul>
+<h2 id="1-1-0-2012-08-06"><a href="https://github.com/ramsey/uuid/compare/1.0.0...1.1.0">1.1.0</a> - 2012-08-06</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Support ramsey/uuid UUIDs as a Doctrine Database Abstraction Layer (DBAL)
+field mapping type</li>
+</ul>
+<h2 id="1-0-0-2012-07-19"><a href="https://github.com/ramsey/uuid/commits/1.0.0">1.0.0</a> - 2012-07-19</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Support generation of version 1, 3, 4, and 5 UUIDs</li>
+</ul>
+
+      </body>
+    </html>

@@ -15,14 +15,15 @@
             <div class="col-lg-6">
                 <div class="container-report--video" data-aos="fade-up" data-aos-delay="300">
                     <div class="container-news" id="video-gallery">
-                        <a href="https://www.youtube.com/watch?v=Agblfa8RjeY&t=1s">
+                        <div href="https://www.youtube.com/watch?v=Agblfa8RjeY&t=1s">
                             <div class="card">
-                                <div class="bg-layer">
+                                <!-- <div class="bg-layer">
                                     <iframe src="https://www.youtube.com/embed/Agblfa8RjeY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <div class="readmore-hover"></div>
-                                </div>
+                                </div> -->
+                                <iframe src="https://www.facebook.com/plugins/video.php?height=385&href=https%3A%2F%2Fwww.facebook.com%2Fprbangkok%2Fvideos%2F721631563036952%2F&show_text=false&width=560&t=0" width="100%" height="385" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>  
             </div>

@@ -82,6 +82,23 @@
     transition: 0.2s 0.1s;
 }
 
+/*--- btn-default ---*/
+.btn-default{
+    border-color: #525252;
+}
+.btn-default::before {
+    background-color: #525252;
+    transition: 0.3s ease-in-out;
+}
+.btn-default span {
+    color: white;
+    transition: 0.2s 0.1s;
+}
+.btn-default span:hover {
+    color: #525252;
+    transition: 0.2s 0.1s;
+}
+
 /*--- btn-signup ---*/
 .btn-signup{
     border-color: rgba(0, 93, 171, 0.8);

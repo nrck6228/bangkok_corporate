@@ -35,7 +35,7 @@
         font-weight: $font-regular;
         font-size: 1.8rem;
         line-height: 2rem;
-        color: #525252;
+        color: $color-secondary;
     }
 
     .form-control{
@@ -480,6 +480,10 @@ a.ui-button:active,
     color: $color-text;
     position: static;
     margin-left: 45px;
+}
+
+.bootstrap-select .dropdown-menu li a span.text{
+    font-size: 14px;
 }
 
 

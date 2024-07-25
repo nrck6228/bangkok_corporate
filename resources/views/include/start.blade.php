@@ -29,37 +29,82 @@
 <script rel="preload" src="{{ asset('js/jquery-ui-1.11.4.custom.js') }}"></script>
   
 <!-- Bootstrap Select -->
-<script src="{{ asset('js/bootstrap-select.min.js') }}"></script>
+<script rel="preload" src="{{ asset('js/bootstrap-select.min.js') }}"></script>
 
-<script src="{{ asset('js/html2canvas.min.js') }}"></script>
-<script src="{{ asset('js/chance.min.js') }}"></script>
+<script rel="preload" src="{{ asset('js/html2canvas.min.js') }}"></script>
+<script rel="preload" src="{{ asset('js/chance.min.js') }}"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,300&display=swap">
+
+<style>
+    /* body{
+        padding-top: 35px;
+    } */
+
+    .phralan--banner{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 35px;
+        display: block;
+        background-color: #e4bc0f;
+        z-index: 9999;
+    }
+
+    .phralan--banner img{
+        width: 100%;
+    }
+
+    @media screen and (min-width: 700px) {
+        /* body{
+            padding-top: 60px;
+        } */
+
+        .phralan--banner{
+            height: 60px;
+        }     
+    }
+
+    @media screen and (min-width: 900px) {
+        /* body{
+            padding-top: 80px;
+        } */
+
+        .phralan--banner{
+            height: 80px;
+        }     
+    }
+
+    @media screen and (min-width: 1200px) {
+        /* body{
+            padding-top: 110px;
+        } */
+
+        .phralan--banner{
+            height: 110px;
+        }     
+    }
+
+    @media screen and (min-width: 1800px) {
+        /* body{
+            padding-top: 150px;
+        } */
+
+        .phralan--banner{
+            height: 150px;
+        }     
+    }
+</style>
 </head>
 
 <body>
-    <!-- Script Loading -->
-    <div class="se-pre-con loading">
-        <div class="group-loading">
-            <div class="lds-ellipsis">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </div>
-    <!-- /Script Loading -->
+    <!-- <a href="http://www.phralan.in.th/" title="พระลาน" target="_blank" class="phralan--banner">
+        <img src="{{ asset('assets/images/phralan_banner.jpg')}}" alt="">
+    </a> -->
     
     @yield('contentpage')
     
-    <script>
-        $(document).ready(function() {
-            $(window).load(function () {
-                $(".se-pre-con.loading").fadeOut(1000);
-            });
-        });
-    </script>
     <script>
         const DEBUG = false;
         const REPETITION_COUNT = 2; // number of times each pixel is assigned to a canvas

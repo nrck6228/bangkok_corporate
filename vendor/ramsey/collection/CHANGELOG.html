@@ -1,0 +1,109 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>CHANGELOG.md</title>
+      </head>
+      <body>
+        <h1 id="ramsey-collection-changelog">ramsey/collection Changelog</h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>
+and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h2 id="unreleased"><a href="https://github.com/ramsey/collection/compare/1.1.0...HEAD">Unreleased</a></h2>
+<h3 id="added">Added</h3>
+<h3 id="changed">Changed</h3>
+<h3 id="deprecated">Deprecated</h3>
+<h3 id="removed">Removed</h3>
+<h3 id="fixed">Fixed</h3>
+<h3 id="security">Security</h3>
+<h2 id="-1-1-1-2020-09-10">[1.1.1] - 2020-09-10</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fixed broken <code>AbstractCollection::map()</code> implementation.</li>
+</ul>
+<h2 id="1-1-0-2020-08-10"><a href="https://github.com/ramsey/collection/compare/1.0.1...1.1.0">1.1.0</a> - 2020-08-10</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fixed <code>AbstractCollection::diff()</code>, <code>AbstractCollection::intersect()</code> and
+<code>AbstractCollection::merge()</code> when used with Generic collections.</li>
+<li>Fixed <code>AbstractCollection::diff()</code> and <code>AbstractCollection::intersect()</code>
+returning inconsistent results when used on collections containing objects.</li>
+<li>Removed warning about deprecated dependency when running <code>composer install</code></li>
+</ul>
+<h2 id="1-0-1-2020-01-04"><a href="https://github.com/ramsey/collection/compare/1.0.0...1.0.1">1.0.1</a> - 2020-01-04</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fixed <code>AbstractCollection::offsetSet()</code> so that it uses the provided <code>$offset</code>
+when setting <code>$value</code> in the array.</li>
+</ul>
+<h2 id="1-0-0-2018-12-31"><a href="https://github.com/ramsey/collection/compare/0.3.0...1.0.0">1.0.0</a> - 2018-12-31</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Added support for <em>queue</em> data structures to represent collections of ordered
+entities. Together with <em>double-ended queues</em> (a.k.a. <em>deques</em>),
+first-in-first-out (FIFO), last-in-first-out (LIFO), and other queue and stack
+behaviors may be implemented. This functionality includes interfaces
+<code>QueueInterface</code> and <code>DoubleEndedQueueInterface</code> and classes <code>Queue</code> and
+<code>DoubleEndedQueue</code>.</li>
+<li>Added support for <em>set</em> data structures, representing collections that cannot
+contain any duplicated elements; includes classes <code>AbstractSet</code> and <code>Set</code>.</li>
+<li>Added support for <em>typed map</em> data structures to represent maps of elements
+where both keys and values have specified data types; includes
+<code>TypedMapInterface</code> and the classes <code>AbstractTypedMap</code> and <code>TypedMap</code>.</li>
+<li>Added new manipulation and analyze methods for collections: <code>column()</code>,
+<code>first()</code>, <code>last()</code>, <code>sort()</code>, <code>filter()</code>, <code>where()</code>, <code>map()</code>, <code>diff()</code>,
+<code>intersect()</code>, and <code>merge()</code>. See <a href="https://github.com/ramsey/collection/blob/master/src/CollectionInterface.php">CollectionInterface</a>
+for more information.</li>
+<li>Added the following new exceptions specific to the ramsey/collection library:
+<code>CollectionMismatchException</code>, <code>InvalidArgumentException</code>,
+<code>InvalidSortOrderException</code>, <code>NoSuchElementException</code>, <code>OutOfBoundsException</code>,
+<code>UnsupportedOperationException</code>, and <code>ValueExtractionException</code>.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Minimum PHP version supported is 7.2.</li>
+<li>Strict types are enforced throughout.</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Removed support for HHVM.</li>
+</ul>
+<h3 id="security">Security</h3>
+<ul>
+<li>Fixed possible exploit using <code>AbstractArray::unserialize()</code>
+(see <a href="https://github.com/ramsey/collection/issues/47">#47</a>).</li>
+</ul>
+<h2 id="0-3-0-2016-05-23"><a href="https://github.com/ramsey/collection/compare/0.2.1...0.3.0">0.3.0</a> - 2016-05-23</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Added <code>MapInterface::keys()</code> method to return the keys from a <code>MapInterface</code>
+object. This was added to the <code>AbstractMap</code> class.</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Removed <code>getType()</code> and constructor methods from <code>AbstractCollection</code>. Children
+of <code>AbstractCollection</code> must now implement <code>getType()</code>, which should return a
+string value that defines the data type of items for the collection.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Improve error messages in exceptions when <code>Collection</code> and <code>NamedParameterMap</code>
+items fail type checks.</li>
+</ul>
+<h2 id="0-2-1-2016-02-22"><a href="https://github.com/ramsey/collection/compare/0.2.0...0.2.1">0.2.1</a> - 2016-02-22</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Allow non-strict checking of values in typed collections.</li>
+</ul>
+<h2 id="0-2-0-2016-02-05"><a href="https://github.com/ramsey/collection/compare/0.1.0...0.2.0">0.2.0</a> - 2016-02-05</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Support typed collections.</li>
+</ul>
+<h2 id="0-1-0-2015-10-27"><a href="https://github.com/ramsey/collection/commits/0.1.0">0.1.0</a> - 2015-10-27</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Support generic arrays and maps.</li>
+</ul>
+
+      </body>
+    </html>

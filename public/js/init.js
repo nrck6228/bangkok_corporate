@@ -25,20 +25,6 @@ $(function () {
         $(this).find('.sub-menu-lv3').hide();
     });
 
-    //menu mobile
-    // window.onscroll = function() {myFunction()};
-    // var header = document.getElementById("menu_sticky");
-    // var sticky = header.offsetTop;
-    
-    // function myFunction() {
-    //     if (window.pageYOffset > sticky) {
-    //         header.classList.add("sticky");
-    //     } else {
-    //         header.classList.remove("sticky");
-    //     }
-    // }
-
-
     // Navigation Menu Slider
     $('#nav-expander').on('click',function(e){
       e.preventDefault();
@@ -54,7 +40,6 @@ $(function () {
         accordion: true,
         openClass: 'open',
     });
-
 
 	$(".menu-wrapper ul li").hover(function () {
 	    $(this).addClass('active');

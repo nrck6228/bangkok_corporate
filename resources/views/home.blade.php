@@ -14,6 +14,9 @@
             @include('component.banner-snap')
         </div>
         <div class="homepage-section section--inside">
+            @include('component.election')
+        </div>
+        <div class="homepage-section section--inside">
             @include('component.covid-main')
         </div>
         <div class="homepage-section section--inside">

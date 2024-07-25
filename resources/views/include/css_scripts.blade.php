@@ -1,4 +1,4 @@
-<script rel="preload" src="{{ asset('js/init.js') }}"></script>
+<script src="{{ asset('js/init.js') }}" defer></script>
 
 <!-- AOS -->
 <link rel="stylesheet" href="{{ asset('animation/aos.css')}}">
@@ -9,7 +9,7 @@
 <script src="{{ asset('js/jquery.navgoco.min.js') }}"></script>
 
 <!-- DragDrop -->
-<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script> 
+<!-- <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>  -->
 
 <!-- Slick -->
 <link rel="stylesheet" href="{{ asset('css/slick.css')}}">
@@ -31,57 +31,6 @@
 <script>
     AOS.init({
         disable: 'mobile'
-    });
-</script>
-
-<script>
-    // Slider
-    $(function (){
-        var $slider = $('.slider');
-
-        if ($slider.length) {
-            var currentSlide;
-            var slidesCount;
-            var sliderCounter = document.createElement('div');
-            sliderCounter.classList.add('slider__counter');
-        
-            var updateSliderCounter = function(slick, currentIndex) {
-                currentSlide = slick.slickCurrentSlide() + 1;
-                slidesCount = slick.slideCount;
-                // $(sliderCounter).html(' BKK News ' + '<br>' + currentSlide + '/' + slidesCount)
-                $(sliderCounter).html(currentSlide + '/' + slidesCount)
-            };
-
-            $slider.on('init', function(event, slick) {
-                $slider.append(sliderCounter);
-                updateSliderCounter(slick);
-            });
-
-            $slider.on('afterChange', function(event, slick, currentSlide) {
-                updateSliderCounter(slick, currentSlide);
-            });
-
-            $slider.slick({
-                infinite: true,
-                accessibility: true,
-                autoplay: false,
-                fade: true,
-                speed: 1000,
-                // cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-                // cssEase: 'cubic-bezier(0.600, -0.280, 0.735, 0.045)',
-                touchThreshold: 100
-            });
-        }
-
-        if($('.slick-slide').length == 1){
-            $('.slider__counter').css('display','none');
-        }
-    });
-
-    jQuery('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        jQuery('audio').each(function(){
-            this.pause(); // Stop playing
-        }); 
     });
 </script>
 
@@ -136,12 +85,12 @@
     });
 </script>
 
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css')}}">
+<script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
 <script>
     const swiper = new Swiper('.swiper-container', {
         speed: 2000,
-        loop: true,
+        loop: false,
         // autoplay: {
         //     delay: 5000,
         //     disableOnInteraction: false,
@@ -181,22 +130,17 @@
         },
 
         on: {
-            slideChange: function () {
-                console.log('Hello World');
+            slideChangeTransitionStart: function(){
+                //alert('before Change')
+                var activeIndex = this.activeIndex;
+                $('.effect').removeClass('effect-slide');
+                this.slides.eq(activeIndex).addClass('effect-slide');
+               // console.log(activeIndex);
+            },
+            slideChangeTransitionEnd: function () {
+                $('.effect').removeClass('effect-slide');
             },
         }
-
-        // on: {
-        //     slideChange: function (el) {
-        //     console.log('1');
-        //     $('.swiper-slide').each(function () {
-        //         var audioPlayer = $(this).find('audio').get(0);
-        //         if (audioPlayer) {
-        //             audioPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-        //         }
-        //     });
-        //     },
-        // },
     });
 </script>
 <script>
@@ -207,27 +151,14 @@
         video.parentNode.replaceChild(img, video);
     }
 </script>
-<!-- <script src="{{ asset('js/canvas-video-player.js') }}"></script>
+
 <script>
-    var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
-    console.log(isIOS);
-    if (isIOS) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const closeCookies = document.getElementById('closeCookies');
+        const cookiesPosition = document.getElementById('cookiesPosition');
 
-        var canvasVideo = new CanvasVideoPlayer({
-            videoSelector: '.video',
-            canvasSelector: '.canvas',
-            timelineSelector: false,
-            autoplay: true,
-            makeLoop: true,
-            pauseOnClick: false,
-            audio: false
+        closeCookies.addEventListener('click', () => {
+            cookiesPosition.style.display = 'none';
         });
-
-    }else {
-
-        // Use HTML5 video
-        document.querySelectorAll('.canvas')[0].style.display = 'none';
-
-    }   
-
-</script> -->
+    });
+</script>
