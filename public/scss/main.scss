@@ -1,23 +1,18 @@
 /* grid system */
 @import "bootstrap/bootstrap";
-@import "bootstrap/bootstrap-grid";
-@import "bootstrap/bootstrap-reboot";
-
+// @import "bootstrap/bootstrap-grid";
+// @import "bootstrap/bootstrap-reboot";
 @import "variables";
 @import "button";
 @import "input";
-
 @import "component/nav";
-
 @import "layout/header";
 @import "layout/header-mobile";
 @import "layout/footer";
 @import "layout/footer-mobile";
 @import "layout/layout-default";
-@import "layout/layout-default-manage";
-
+// @import "layout/layout-default-manage";
 @import "component/banner-slide";
-
 @import "content/page-login";
 
 html {
@@ -47,7 +42,6 @@ body{
     &::-webkit-scrollbar-thumb {
         background-color: $color-secondary;
         border-radius: 0;
-        // border: 3px solid $color-secondary;
     }
 }
 

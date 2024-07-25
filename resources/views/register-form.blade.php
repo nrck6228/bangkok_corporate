@@ -48,7 +48,7 @@
         monthNamesShort: ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'],
         constrainInput: true,
         yearOffSet: 543,
-        yearRange: '-10:+0',
+        yearRange: '-60:+0',
         maxDate: 0,
     };
     $.datepicker.setDefaults($.datepicker.regional['th']);

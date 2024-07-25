@@ -31,6 +31,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="line--graphic">
+                        <div class="line__text">
+                            หรือ
+                        </div>
+                    </div>
                     <div class="sign-w-form">
                         <form action="" method="get" autocomplete="off" class="form">
                             <div class="row">

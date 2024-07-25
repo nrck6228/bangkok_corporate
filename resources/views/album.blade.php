@@ -69,7 +69,7 @@
             $(document).lightGallery({
                 dynamic: true,
                 dynamicEl: [{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/1.jpg',
+                    src: 'assets/images/4-1600.jpg',
                     thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg',
                     subHtml: '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
                 },{
@@ -77,7 +77,7 @@
                     poster: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-v-y-1.jpg',
                     subHtml: '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
                 },{
-                    src: 'https://sachinchoolur.github.io/lightGallery/static/img/4.jpg',
+                    src: 'assets/images/4-1600.jpg',
                     thumb: 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg',
                     subHtml: '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
                 }],

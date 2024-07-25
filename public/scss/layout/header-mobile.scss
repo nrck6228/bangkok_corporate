@@ -1,22 +1,4 @@
 @media only screen and (max-width: 1024px) {
-    .manage{
-        .main-wrapper{
-            #header-wrapper{
-                padding-top: 36.2px;
-                .header-sm{
-                    .logo-mobile{
-                        .menu-sizefonts-wrapper{
-                            &.sticky{
-                                top: 36.2px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
     #header-wrapper{
         .header-lg{
             display: none;

@@ -159,3 +159,29 @@
         </div> 
     </div>
 </div>
+
+<div class="cookies-position" id="cookiesPosition">
+    <div class="cookies-wrapper">
+        <div class="container-fluid">
+            <div class="row align-items-center cookies-container cookies-align">
+                <div class="col-12 col-md-auto">
+                    <span class="cookies-text">
+                        เว็บไซต์ของเราใช้คุกกี้เพื่อพัฒนาประสิทธิภาพ และประสบการณ์ที่ดีในการใช้เว็บไซต์ของท่าน ท่านสามารถศึกษารายละเอียดได้ที่ <a href="privacy" title="นโยบายความเป็นส่วนตัว" >นโยบายความเป็นส่วนตัว</a>
+                    </span>
+                </div>
+                <div class="col-12 col-md-auto">
+
+                    <div class="cookies-button">
+                        <!-- <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalCookies">Change Preferences</a> -->
+                        <a href="javascript:void(0)" id="acceptCookie" class="cookie-button">
+                            ยอมรับ
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <a href="javascript:void(0)" class="cookies-close" id="closeCookies">X</a>
+    </div>
+</div>

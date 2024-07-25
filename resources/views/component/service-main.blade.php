@@ -156,9 +156,11 @@
                 <div class="item">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-6">
-                            <div class="title-text">
-                                <h2>BANGKOK Highlight</h2>
-                                <p>ห้องเรียน วิถี New Normal, Social Distancing</p>
+                            <div class="title-wrap">
+                                <div class="title-text">
+                                    <h2>BANGKOK Highlight</h2>
+                                    <p>ห้องเรียน วิถี New Normal, Social Distancing</p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,43 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="phpunit-php-code-coverage">phpunit/php-code-coverage</h1>
+<p><a href="https://packagist.org/packages/phpunit/php-code-coverage"><img src="https://poser.pugx.org/phpunit/php-code-coverage/v/stable.png" alt="Latest Stable Version"></a>
+<a href="https://github.com/sebastianbergmann/php-code-coverage/actions"><img src="https://github.com/sebastianbergmann/php-code-coverage/workflows/CI/badge.svg" alt="CI Status"></a>
+<a href="https://shepherd.dev/github/sebastianbergmann/php-code-coverage"><img src="https://shepherd.dev/github/sebastianbergmann/php-code-coverage/coverage.svg" alt="Type Coverage"></a></p>
+<p>Provides collection, processing, and rendering functionality for PHP code coverage information.</p>
+<h2 id="installation">Installation</h2>
+<p>You can add this library as a local, per-project dependency to your project using <a href="https://getcomposer.org/">Composer</a>:</p>
+<pre><code>composer require phpunit/php-code-coverage
+</code></pre><p>If you only need this library during development, for instance to run your project&#39;s test suite, then you should add it as a development-time dependency:</p>
+<pre><code>composer require --dev phpunit/php-code-coverage
+</code></pre><h2 id="usage">Usage</h2>
+<pre><code class="lang-php">&lt;?php declare(strict_types=1);
+use SebastianBergmann\CodeCoverage\Filter;
+use SebastianBergmann\CodeCoverage\Driver\Selector;
+use SebastianBergmann\CodeCoverage\CodeCoverage;
+use SebastianBergmann\CodeCoverage\Report\Html\Facade as HtmlReport;
+
+$filter = new Filter;
+$filter-&gt;includeDirectory(&#39;/path/to/directory&#39;);
+
+$coverage = new CodeCoverage(
+    (new Selector)-&gt;forLineCoverage($filter),
+    $filter
+);
+
+$coverage-&gt;start(&#39;&lt;name of test&gt;&#39;);
+
+// ...
+
+$coverage-&gt;stop();
+
+
+(new HtmlReport)-&gt;process($coverage, &#39;/tmp/code-coverage-report&#39;);
+</code></pre>
+
+      </body>
+    </html>

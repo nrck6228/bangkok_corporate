@@ -111,3 +111,32 @@ Route::any('/video', function () {
 Route::any('/organization', function () {
     return view('organization');
 });
+
+//20210705
+Route::any('/questionnaire', function () {
+    return view('questionnaire-list');
+});
+
+Route::any('/questionnaire-detail', function () {
+    return view('questionnaire-detail');
+});
+
+Route::any('/vote', function () {
+    return view('vote-list');
+});
+
+Route::any('/vote-detail', function () {
+    return view('vote-detail');
+});
+
+Route::any('/calendar', function () {
+    return view('calendar-list');
+});
+
+Route::any('/calendar-detail', function () {
+    return view('calendar-detail');
+});
+
+Route::any('/policy', function () {
+    return view('policy');
+});

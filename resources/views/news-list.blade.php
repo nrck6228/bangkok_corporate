@@ -69,22 +69,22 @@
     };
     $.datepicker.setDefaults($.datepicker.regional['th']);
     // EN
-    /*$.datepicker.regional['en'] ={
-        dateFormat: 'dd/mm/yy',
-        changeMonth: true,
-        changeYear: true,
-        constrainInput: true,
-        yearOffSet : 0,
-        yearRange: '-80:+0',
-        maxDate: 0,
-        onSelect: function(dateText, inst) {
-            var old = $(this).datepicker('getDate');
-            var age = GetAge(old);
-            console.log(age);
-            $('#age').val(age);
-        },
-    };
-    $.datepicker.setDefaults($.datepicker.regional['en']);*/
+    // $.datepicker.regional['en'] ={
+    //     dateFormat: 'dd/mm/yy',
+    //     changeMonth: true,
+    //     changeYear: true,
+    //     constrainInput: true,
+    //     yearOffSet : 0,
+    //     yearRange: '-80:+0',
+    //     maxDate: 0,
+    //     onSelect: function(dateText, inst) {
+    //         var old = $(this).datepicker('getDate');
+    //         var age = GetAge(old);
+    //         console.log(age);
+    //         $('#age').val(age);
+    //     },
+    // };
+    // $.datepicker.setDefaults($.datepicker.regional['en']);
 
     $(document).ready(function () {
         $("#startDate").datepicker($.datepicker.regional["th"]);

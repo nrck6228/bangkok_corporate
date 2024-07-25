@@ -343,34 +343,17 @@
                 height: auto;
                 overflow: hidden;
 
-                // .video-responsive {
-                //     padding-bottom: 56.25%;
-                //     position: relative;
-                //     width: 100%;
-                // }
-                
-                // .canvas,
-                // .video {
-                //     height: 100%;
-                //     left: 0;
-                //     position: absolute;
-                //     top: 0;
-                //     width: 100%;
-                //     background: #000;
-                //     z-index: 5;
-                // }
-
                 &.swiper-container-flip{
                     overflow: hidden;
                 }
-
 
                 .swiper-scrollbar{
                     visibility: hidden;
                     opacity: 0;
                 }
 
-                .swiper-button-next, .swiper-button-prev{
+                .swiper-button-next, 
+                .swiper-button-prev{
                     position: absolute;
                     top: 50%;
                     width: 45px;
@@ -536,31 +519,64 @@
                     }
                 }
             }
+
+            .swiper-slide{
+                &.effect{
+                    img:nth-child(1) {
+                        height: 100%;
+                        left: 0;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 0;
+                        transform-origin: left;
+                        transition: filter 3s ease,
+                        opacity 3s ease,
+                        transform 3s ease;
+                        width: 100%;
+                    }
+
+                    img:nth-child(2) {
+                        height: 100%;
+
+                        @media only screen and (max-width: 480px){
+                            display: none;
+                        }
+                    }
+                }
+
+                &.effect-slide{
+                    img:nth-child(2) {
+                        -webkit-animation: open_drawer 6s ease;
+                        transform: translateX(0) scaleX(1);
+                        @-webkit-keyframes open_drawer {
+                            to {
+                                -webkit-transform: translateX(1440px);
+                            }
+                        }
+
+                    }
+
+                    @media only screen and (min-width: 1441px){
+                        @-webkit-keyframes open_drawer {
+                            to {
+                                -webkit-transform: translateX(2560px);
+                            }
+                        }
+                    }
+                    @media only screen and (max-width: 480px){
+                        img:nth-child(1){
+                            filter: blur(10px);
+                        }
+                        img:nth-child(2){
+                            display: none;
+                        }
+                        
+                    }
+                }
+            }
         }
     }
 }
-
-.disintegration-container {
-    position: absolute;
-    pointer-events: none;
-    
-    > canvas {
-      position: absolute;
-      left: 0;
-      top: 0;
-      transition: transform 1s ease-out, opacity 1s ease-out;
-      opacity: 1;
-      transform:
-        rotate(0deg) translate(0px, 0px) rotate(0deg);
-    }
-  }
-  
-  @keyframes debug-pulse {
-    0% { filter: none; }
-    95% { filter: none; }
-    95% { filter: drop-shadow(0 1px 0 rgba(255,0,0,1)); }
-    100% { filter: drop-shadow(0 1px 0 rgba(255,0,0,1)); }
-  }
 
 .scroll-down{
     position: absolute;

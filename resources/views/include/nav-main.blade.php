@@ -135,13 +135,13 @@
         <div class="social">
             <div class="social-list">
                 <a href="/" title="" target="_blank" class="icon-fb">
-                    <i class="fab fa-facebook"></i>
+                    <em class="fa-brands fa-facebook"></em>
                 </a>
                 <a href="/" title="" target="_blank" class="icon-twt">
-                    <i class="fab fa-twitter"></i>
+                    <em class="fa-brands fa-x-twitter"></em>
                 </a>
                 <a href="/" title="" target="_blank" class="icon-yt">
-                    <i class="fab fa-youtube"></i>    
+                    <em class="fa-brands fa-youtube"></em>    
                 </a>
             </div>
         </div>
