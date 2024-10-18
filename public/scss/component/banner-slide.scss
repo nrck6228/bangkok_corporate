@@ -35,8 +35,6 @@
             right: 30px;
             &.slick-prev{
                 text-indent: -9999px;
-                //left: auto;
-                //right: 0;
                 top: 40%;
                 width: 60px;
                 height: 60px;
@@ -46,7 +44,6 @@
             }
             &.slick-next{
                 text-indent: -9999px;
-                //right: 0;
                 top: 54%;
                 width: 60px;
                 height: 60px;
@@ -164,7 +161,6 @@
         bottom: 0;
         li{
             float: left;
-            //width: 50%;
             height: 7px;
             background-color: #d7d9db;
             margin: 0;
@@ -177,7 +173,6 @@
         li.slick-active{
             background-color: $color-primary;
         }
-        // li.slick-active Css infile color.scss
     }
 
     .slick-dotted.slick-slider{
